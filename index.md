@@ -25,10 +25,10 @@ layout: default
   z-index: 9999;
 ">
   
-  <a href="#home" style="margin-right: 40px;">/HOME</a>
-  <a href="#about" style="margin-right: 40px;">/ABOUT</a>
-  <a href="#labs" style="margin-right: 40px;">/LABS</a>
-  <a href="#writeups" style="margin-right: 40px;">/WRITEUPS</a>
-  <a href="#credentials" style="margin-right: 40px;">/CREDENTIALS</a>
+  <a href="#home" style="margin-right: 10px;">/HOME</a>
+  <a href="#about" style="margin-right: 10px;">/ABOUT</a>
+  <a href="#labs" style="margin-right: 10px;">/LABS</a>
+  <a href="#writeups" style="margin-right: 10px;">/WRITEUPS</a>
+  <a href="#credentials" style="margin-right: 10px;">/CREDENTIALS</a>
   <a href="#contact">/CONTACT</a>
 </div>
