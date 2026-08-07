@@ -52,7 +52,7 @@ pre {
     inset 0 0 10px #ffbf00;         /* inner CRT glow */
 }
 
-/* Remove the entire Hacker theme header bar */
-header {
+/* Hide Hacker theme left header */
+header h1 {
   display: none !important;
 }
