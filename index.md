@@ -15,6 +15,10 @@ layout: default
 </div>
 
 
+<a href="https://earnesttavares.github.io/Earnest-Tavares-CV.pdf" class="btn" style="margin-right:10px;">View CV</a>
+<a href="https://www.linkedin.com/in/earnest-tavar/" class="btn" style="margin-right:10px;">LinkedIn</a> 
+
+
 <div id="navbar" style="
   position: fixed;
   top: 80px;
