@@ -17,7 +17,7 @@ layout: default
 
 <div style="
   position: absolute;
-  top: 120px;   /* ← change this number to move it lower */
+  top: 80px;   /* ← change this number to move it lower or higher */
   right: 20px;
   font-family: monospace;
   font-size: 16px;
