@@ -15,17 +15,20 @@ layout: default
 </div>
 
 
-<div style="
-  position: absolute;
-  top: 80px;   /* ← change this number to move it lower or higher */
-  right: 20px;
+<div id="navbar" style="
+  position: fixed;
+  top: 40px;
+  right: 40px;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  z-index: 9999;
 ">
-  <a href="/" style="color:#ffbf00; margin-left:15px;">/Home</a>
-  <a href="/about" style="color:#ffbf00; margin-left:15px;">/About</a>
-  <a href="/labs" style="color:#ffbf00; margin-left:15px;">/Labs</a>
-  <a href="/writeups" style="color:#ffbf00; margin-left:15px;">/Writeups</a>
-  <a href="/credentials" style="color:#ffbf00; margin-left:15px;">/Credentials</a>
-  <a href="/contact" style="color:#ffbf00; margin-left:15px;">/Contact</a>
+  
+  <a href="#home" style="margin-right: 20px;">/HOME</a>
+  <a href="#about" style="margin-right: 20px;">/ABOUT</a>
+  <a href="#labs" style="margin-right: 20px;">/LABS</a>
+  <a href="#writeups" style="margin-right: 20px;">/WRITEUPS</a>
+  <a href="#credentials" style="margin-right: 20px;">/CREDENTIALS</a>
+  <a href="#contact">/CONTACT</a>
 </div>
