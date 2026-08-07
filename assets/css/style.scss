@@ -41,6 +41,11 @@ pre {
     inset 0 0 10px #ffbf00;
 }
 
+/* Push main content downward for better centering */
+main {
+  margin-top: 120px;   /* adjust this number to move it further down */
+}
+
 /* Retro Terminal Border */
 pre {
   border: 2px solid #ffbf00;
