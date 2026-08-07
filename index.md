@@ -17,7 +17,7 @@ layout: default
 
 <div id="navbar" style="
   position: fixed;
-  top: 40px;
+  top: 80px;
   right: 40px;
   font-family: monospace;
   font-size: 18px;
@@ -25,10 +25,10 @@ layout: default
   z-index: 9999;
 ">
   
-  <a href="#home" style="margin-right: 20px;">/HOME</a>
-  <a href="#about" style="margin-right: 20px;">/ABOUT</a>
-  <a href="#labs" style="margin-right: 20px;">/LABS</a>
-  <a href="#writeups" style="margin-right: 20px;">/WRITEUPS</a>
-  <a href="#credentials" style="margin-right: 20px;">/CREDENTIALS</a>
+  <a href="#home" style="margin-right: 40px;">/HOME</a>
+  <a href="#about" style="margin-right: 40px;">/ABOUT</a>
+  <a href="#labs" style="margin-right: 40px;">/LABS</a>
+  <a href="#writeups" style="margin-right: 40px;">/WRITEUPS</a>
+  <a href="#credentials" style="margin-right: 40px;">/CREDENTIALS</a>
   <a href="#contact">/CONTACT</a>
 </div>
