@@ -20,3 +20,34 @@ body, p, li, h1, h2, h3, h4, h5, h6, a {
 a {
   color: #ffc733 !important;
 } 
+
+/* CRT Glow */
+pre {
+  color: #ffbf00 !important;        /* amber phosphor */
+  text-shadow:
+    0 0 4px #ffbf00,
+    0 0 8px #ffbf00,
+    0 0 12px #ffbf00;               /* burn-in glow */
+  font-family: "Courier New", monospace;
+}
+
+/*Welcome color matching*/
+pre {
+  border: 2px solid #ffbf00;
+  padding: 20px;
+  background: #000;
+  box-shadow:
+    0 0 10px #ffbf00,
+    inset 0 0 10px #ffbf00;
+}
+
+/* Retro Terminal Border */
+pre {
+  border: 2px solid #ffbf00;
+  padding: 20px;
+  display: inline-block;
+  background: #000;
+  box-shadow:
+    0 0 10px #ffbf00,
+    inset 0 0 10px #ffbf00;         /* inner CRT glow */
+}
