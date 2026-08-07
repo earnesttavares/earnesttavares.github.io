@@ -61,3 +61,21 @@ pre {
 header h1 {
   display: none !important;
 }
+
+/* CRT Glow Buttons */
+.btn {
+  background: transparent;
+  border: 1px solid #ffb000; /* amber CRT color */
+  color: #ffb000;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-family: monospace;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 4px #ffb000;
+}
+
+.btn:hover {
+  background: #ffb000;
+  color: black;
+  box-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;
+}
