@@ -79,3 +79,14 @@ header h1 {
   color: black;
   box-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;
 }
+
+#top-left-buttons {
+  position: fixed;
+  top: 20px;     /* adjust this number to move it up/down */
+  left: 20px;    /* adjust this number to move it left/right */
+  z-index: 9999;
+}
+
+#top-left-buttons .btn {
+  margin-right: 10px;   /* spacing between the buttons */
+}
