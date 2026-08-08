@@ -19,8 +19,7 @@ layout: default
   <p class="line">[BOOT SEQUENCE INITIATED]</p>
   <p class="line">Loading user profile: Earnest Tavares...</p>
   <p class="line">System integrity: VERIFIED</p>
-  <p class="line">Launching cyberfolio interface...</p>
-  <p class="line">Terminal ready.</p>
+  <p class="line">Deploying skill modules...</p> 
 </div>
 
 
