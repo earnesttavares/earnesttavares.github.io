@@ -15,14 +15,6 @@ layout: default
 </div>
 
 
-.welcome-lines {
-  color: #ffb000;
-  font-family: monospace;
-  text-shadow: 0 0 6px #ffb000, 0 0 12px #ffb000;
-  white-space: pre;
-}
-
-
 <div class="terminal">
   <p class="line">[BOOT SEQUENCE INITIATED]</p>
   <p class="line">Loading user profile: Earnest Tavares...</p>
