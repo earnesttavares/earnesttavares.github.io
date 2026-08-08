@@ -94,15 +94,17 @@ header h1 {
 
 /*Adding glow to the nav bar*/
 #navbar a {
-  color: #ffb000;
+  color: #ffb000;                 /* amber CRT color */
   text-decoration: none;
   font-family: monospace;
   transition: 0.2s ease-in-out;
-  box-shadow: 0 0 4px #ffb000;
+  text-shadow: 0 0 4px #ffb000;   /* glow */
 }
 
 #navbar a:hover {
-  background: #ffb000;
-  color: black;
-  box-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;
+  color: #ffb000;
+  background: transparent;        /* no box */
+  padding: 0;                     /* no box */
+  border: none;                   /* no box */
+  text-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;  /* stronger glow */
 }
