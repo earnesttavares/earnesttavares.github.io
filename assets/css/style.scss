@@ -80,13 +80,29 @@ header h1 {
   box-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;
 }
 
+/*Button adjustments*/
 #top-left-buttons {
   position: fixed;
-  top: 20px;     /* adjust this number to move it up/down */
+  top: 40px;     /* adjust this number to move it up/down */
   left: 20px;    /* adjust this number to move it left/right */
   z-index: 9999;
 }
 
 #top-left-buttons .btn {
   margin-right: 10px;   /* spacing between the buttons */
+}
+
+/*Adding glow to the nav bar*/
+#navbar a {
+  color: #ffb000;
+  text-decoration: none;
+  font-family: monospace;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 4px #ffb000;
+}
+
+#navbar a:hover {
+  background: #ffb000;
+  color: black;
+  box-shadow: 0 0 8px #ffb000, 0 0 12px #ffb000;
 }
