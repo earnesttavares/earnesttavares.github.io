@@ -123,9 +123,6 @@ header h1 {
   width: 0;
   animation: typing 2s steps(40, end) forwards,
              blink 0.7s step-end infinite alternate;
-
-.line {
-  padding-bottom: 5px;
 }
 
 /* Delay each line so they type one after another */
