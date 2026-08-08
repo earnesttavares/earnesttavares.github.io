@@ -17,7 +17,7 @@ layout: default
 
 <div id="top-left-buttons">
   <a href="https://earnesttavares.github.io/Earnest-Tavares-CV.pdf" class="btn" style="margin-right:10px;">View CV</a>
-  <a href="https://www.linkedin.com/in/earnest-tavar/" class="btn" style="margin-right:10px;">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/earnest-tavar/" class="btn" style="margin-right:10px;">View LinkedIn</a>
 </div> 
 
 <div id="navbar" style="
