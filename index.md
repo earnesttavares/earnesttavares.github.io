@@ -15,6 +15,23 @@ layout: default
 </div>
 
 
+.welcome-lines {
+  color: #ffb000;
+  font-family: monospace;
+  text-shadow: 0 0 6px #ffb000, 0 0 12px #ffb000;
+  white-space: pre;
+}
+
+
+<div class="terminal">
+  <p class="line">[BOOT SEQUENCE INITIATED]</p>
+  <p class="line">Loading user profile: Earnest Tavares...</p>
+  <p class="line">System integrity: VERIFIED</p>
+  <p class="line">Launching cyberfolio interface...</p>
+  <p class="line">Terminal ready.</p>
+</div>
+
+
 <div id="top-left-buttons">
   <a href="https://earnesttavares.github.io/Earnest-Tavares-CV.pdf" class="btn" style="margin-right:10px;">View CV</a>
   <a href="https://www.linkedin.com/in/earnest-tavar/" class="btn" style="margin-right:10px;">View LinkedIn</a>
