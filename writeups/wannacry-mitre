@@ -1,6 +1,7 @@
 ---
 title: Mapping Wannacry Ransomware to MITRE ATT&CK Framework
-layout: default
+parent: Writeups
+nav_order: 1
 ---
 
 # Wannacry - MITRE
