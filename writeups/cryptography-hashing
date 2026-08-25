@@ -1,6 +1,7 @@
 ---
 title: Cryptography & Hashing
-layout: default
+parent: Writeups
+nav_order: 3
 ---
 
 # Cryptography & Hashing 
