@@ -1,6 +1,7 @@
 ---
 title: ACLs & Permissions 
-layout: default 
+parent: Writeups
+nav_order: 2
 ---
 
 # ACLs & Permissions 
