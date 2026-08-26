@@ -65,7 +65,7 @@ nav_order: 1
 
 <h2><span style="border-bottom: 1px solid #ccc;">What I Do</span></h2>
 
-⟁ <strong><span style="color:#e0b33f;">Threat Analysis</span></strong> >> log analysis, packet inspection, detection workflows 
+⟁ <strong><span style="color:#e0b33f;">Threat Analysis</span></strong> >> Log analysis, packet inspection, detection workflows 
 
 🗁 <strong><span style="color:#e0b33f;">Hands‑On Labs</span></strong> >> Malware triage, memory forensics, incident response simulations 
 
@@ -78,9 +78,11 @@ nav_order: 1
 
 Explore some of my ongoing projects and lab work:
 
-🌐 [Placeholder 1]   
+🌐 [Cybersecurity Home Lab Environment](projects/home_lab) <br>
+▸ Hands‑on security lab built to practice defensive skills and analyze system telemetry. 
 
-🌐 [Placeholder 2] 
+🌐 [WannaCry Ransomware & MITRE ATT&CK Mapping](writeups/wannacry_mitre) <br>
+▸ A MITRE‑aligned breakdown of WannaCry’s attack behavior.
 
 <br>
 
