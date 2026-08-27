@@ -36,11 +36,6 @@ nav_order: 1
   </div>
 </h1>
 
-
-<h2 align="center" style="font-weight:500;">
-  I focus on threat detection, network analysis, and digital forensics.
-</h2>
-
 <br>
 
 <div style="text-align:center; margin: 25px 0;">
