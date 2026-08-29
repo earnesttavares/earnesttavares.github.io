@@ -15,9 +15,6 @@ plugins:
 # GitHub Pages Jekyll Theme
 remote_theme: just-the-docs/just-the-docs 
 
-# Favicon
-favicon: /favicon.png
-
 # Dark mode 
 color_scheme: dark
  
