@@ -17,6 +17,10 @@ remote_theme: just-the-docs/just-the-docs
 
 # Dark mode 
 color_scheme: dark
+
+#Favicon
+url: "https://earnesttavares.github.io"
+baseurl: "" 
  
  # Site Identity
 title: "Cyberfolio"
