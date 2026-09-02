@@ -64,14 +64,14 @@ nav_order: 1
 
 🗁 <strong><span style="color:#e0b33f;">Hands‑On Labs</span></strong> >> Malware triage, memory forensics, incident response simulations 
 
-⚙︎ <strong><span style="color:#e0b33f;">Tools & Environments</span></strong> >> Linux/WSL, Python, Wireshark, Nmap, Splunk, Snort, Burp Suite, Volatility 3 
+⚙︎ <strong><span style="color:#e0b33f;">Tools & Environments</span></strong> >> Linux/WSL, Splunk, Snort, Wireshark, Volatility 3, Python, Nmap, Burp Suite
 
-⌁ I blend creative problem‑solving with technical precision to break down complex security challenges 
+⌁ I blend creative problem‑solving with technical precision to break down complex security challenges. 
   
 
 <h2><span style="border-bottom: 1px solid #ccc;">Featured Work</span></h2>
 
-Explore some of my ongoing projects and lab work:
+Explore my cybersecurity projects, labs, and analyses:
 
 🌐 [Cybersecurity Home Lab Environment](projects/home_lab) <br>
 ▸ Hands‑on security lab built to practice defensive skills and analyze system telemetry. 
