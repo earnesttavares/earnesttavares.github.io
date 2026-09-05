@@ -30,9 +30,9 @@ WannaCry, also known as WannaCrypt, was a globally significant cyberattack that 
 WannaCry impacted hundreds of thousands of computers worldwide and severely impacted critical organizations such as healthcare, government agencies, and private enterprises, causing massive operational disruption, financial losses, and service outages. Analysis of the malware demonstrates the use of multiple MITRE ATT&CK techniques across the Initial Access, Execution, Lateral Movement, Defense Evasion, and Impact phases.
 
 ### Immediate Triage:
-* <u>Isolate Hosts:</u> Disconnect infected or unpatched machines from the network 
-* <u>Block Port 445:</u> Restrict inbound and outbound SMB traffic at the firewall 
-* <u>Deploy Signatures:</u> Activate IDS/IPS rules for CVE-2017-0144 detection 
+* **Isolate Hosts:** Disconnect infected or unpatched machines from the network 
+* **Block Port 445:** Restrict inbound and outbound SMB traffic at the firewall 
+* **Deploy Signatures:** Activate IDS/IPS rules for CVE-2017-0144 detection 
 
 ### Strategic Hardening: 
 * Disable SMBv1 
@@ -59,22 +59,22 @@ WannaCry impacted hundreds of thousands of computers worldwide and severely impa
 
 <h2 style="color:#D4A017;">Attack Timeline</h2>
 
-<h5 style="color:#E4E8E3;">April 14-15 2017:</h5>
+<u>April 14-15 2017:</u>
 ➔ The Shadow Brokers released offensive hacking tools stolen from the NSA. Included in the leak was the EternalBlue exploit. This exploit targeted a vulnerability in Microsoft’s Server Message Block (SMB) protocol used for file and printer sharing. <br>
 
-<h5 style="color:#E4E8E3;">May 12, 2017:</h5> 
+<u>May 12, 2017:</u> 
 ➔ WannaCry infections began spreading globally. <br>
 
-<h5 style="color:#E4E8E3;">Propagation Phase:</h5> 
+<u>Propagation Phase:</u> 
 ➔ WannaCry used the EternalBlue exploit to propagate through networks and infect vulnerable Windows systems.  <br>
 
-<h5 style="color:#E4E8E3;">Impact Phase:</h5> 
+<u>Impact Phase:</u> 
 ➔ Victims' files were encrypted and users were presented with ransom demands of around $300 - $600 payable in Bitcoin. <br>
 
-<h5 style="color:#E4E8E3;">Containment:</h5> 
+<u>Containment:</u>
 ➔ Security researcher Marcus Hutchins accidentally discovered a kill switch domain within the malware’s code. Registering this domain halted the further spread of the ransomware. <br>
 
-<h5 style="color:#E4E8E3;">Post-Incident Response:</h5> 
+<u>Post-Incident Response:</u> 
 ➔ Microsoft released emergency security patches (MS17-010) to address the vulnerabilities exploited by WannaCry. Organizations accelerated vulnerability remediation efforts. <br>
 
 ---
@@ -147,9 +147,9 @@ WannaCry used strong encryption to hide its malicious activities and make it cha
 * Analysts observed these specific commands being deployed to hide malicious files from users, override standard permission restrictions (ACLs), and actively reduce detection opportunities. 
 
 ### Persistence & Propagation Profile: 
-* <u>Lateral Movement:</u> Once inside a network, it sought out other vulnerable systems within the compromised network and attempted to infect them, further expanding its reach. 
-* <u>Autonomous Propagation:</u> The ransomware functioned as a network worm and autonomously sought out and infected vulnerable systems without the need for user interaction or external C2 triggers. 
-* <u>Network Persistence:</u> WannaCry’s use of the SMB protocol allowed it to remain active within the network, continually searching for new targets and encrypting files on connected systems.  
+* **Lateral Movement:** Once inside a network, it sought out other vulnerable systems within the compromised network and attempted to infect them, further expanding its reach. 
+* **Autonomous Propagation:** The ransomware functioned as a network worm and autonomously sought out and infected vulnerable systems without the need for user interaction or external C2 triggers. 
+* **Network Persistence:** WannaCry’s use of the SMB protocol allowed it to remain active within the network, continually searching for new targets and encrypting files on connected systems.  
 
 ---
 
@@ -191,15 +191,15 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 <br>
 
 ### Network & Infrastructure Indicators 
-* <u>Target Ports:</u> TCP Port 445 (SMB) 
-* <u>Kill-Switch Domain Check:</u> Outbound HTTP requests over port 80 to: `://iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com`. 
-* <u>Outbound Signatures:</u> Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
+* **Target Ports:** TCP Port 445 (SMB) 
+* **Kill-Switch Domain Check:** Outbound HTTP requests over port 80 to: `://iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com`. 
+* **Outbound Signatures:** Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
 
 ### Host-Based Artifacts 
-* <u>Created Windows Service:</u> `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
-* <u>Ransom File Extension:</u> Appends `.WNCRY` to all successfully targeted files. 
-* <u>File Encryption Manager:</u> `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
-* <u>Dropped Ransom Note:</u> Creates text files named `@Please_Read_Me@.txt`. 
+* **Created Windows Service:** `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
+* **Ransom File Extension:** Appends `.WNCRY` to all successfully targeted files. 
+* **File Encryption Manager:** `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
+* **Dropped Ransom Note:** Creates text files named `@Please_Read_Me@.txt`. 
 
 ---
 
