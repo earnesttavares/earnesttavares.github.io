@@ -4,7 +4,7 @@ parent: Writeups
 nav_order: 1
 ---
 
-# Threat Intelligence Report: WannaCry Ransomware 
+<h1 style="color:#33aaff;">Threat Intelligence Report: WannaCry Ransomware</h1> 
 
 <br>
 
@@ -14,16 +14,20 @@ nav_order: 1
 **Framework:** MITRE ATT&CK <br>
 **Severity:** <code style="color : red"> Critical </code> <br>
 **TLP Status:** TLP: CLEAR ⚪ <br>
-**Targeting Strategy:** Opportunistic / Indiscriminate Global Scanning <br> 
-**Highly Impacted Sectors:** Healthcare, Telecommunications, Logistics <br>
 
 <br>
 
-## Executive Summary 
+<h2 style="color:#D4A017;">Writeup Objective</h2>
 
-WannaCry, also known as WannaCrypt, was a globally significant cyberattack that occurred on May 12, 2017, attributed to the North Korean state-sponsored threat group Lazarus (APT38). The ransomware spread rapidly across vulnerable Microsoft Windows systems by exploiting the ***EternalBlue (CVE-2017-0144)*** vulnerability within the Server Message Block (SMBv1) protocol over port 445. Once executed, WannaCry encrypted the victims' files and demanded payment in Bitcoin in exchange for decryption keys. Propagation was heavily mitigated hours later by the discovery of an internal hardcoded kill-switch domain.
+Analyze the WannaCry ransom attack  through the lens of threat intelligence and the MITRE ATT&CK framework. Identify adversary behaviors, IoCs, and recommend defensive measures.
 
-The attack impacted hundreds of thousands of computers worldwide and heavily affected critical organizations such as healthcare, government agencies, and private enterprises, causing massive operational disruption, financial losses, and service outages. Analysis of the malware demonstrates the use of multiple MITRE ATT&CK techniques across the Initial Access, Execution, Lateral Movement, Defense Evasion, and Impact phases.
+---
+
+<h2 style="color:#D4A017;">Executive Summary</h2>
+
+WannaCry, also known as WannaCrypt, was a globally significant cyberattack that occurred on May 12, 2017, attributed to the North Korean state-sponsored threat group Lazarus (APT38). The ransomware spread rapidly across vulnerable Microsoft Windows systems by exploiting the ***EternalBlue (CVE-2017-0144)*** vulnerability within the Server Message Block (SMBv1) protocol over port 445. Once executed, WannaCry encrypted the victims' files and demanded payment in Bitcoin in exchange for decryption keys. Hours later, the discovery and registration of a hardcoded kill-switch domain put an end to the global attack.
+
+WannaCry impacted hundreds of thousands of computers worldwide and severely impacted critical organizations such as healthcare, government agencies, and private enterprises, causing massive operational disruption, financial losses, and service outages. Analysis of the malware demonstrates the use of multiple MITRE ATT&CK techniques across the Initial Access, Execution, Lateral Movement, Defense Evasion, and Impact phases.
 
 ### Immediate Triage:
 * **Isolate Hosts:** Disconnect infected or unpatched machines from the network 
@@ -37,7 +41,7 @@ The attack impacted hundreds of thousands of computers worldwide and heavily aff
   
 ---
 
-## Key Findings 
+<h2 style="color:#D4A017;">Key Findings</h2>
 
 | Category | Assessment |
 | --- | --- | 
@@ -53,29 +57,29 @@ The attack impacted hundreds of thousands of computers worldwide and heavily aff
 
 ---
 
-## Attack Timeline 
+<h2 style="color:#D4A017;">Attack Timeline</h2>
 
-_**April 14-15 2017:**_ <br>
-‣ The Shadow Brokers released offensive hacking tools stolen from the NSA. Included in the leak was the EternalBlue exploit. This exploit targeted a vulnerability in Microsoft’s Server Message Block (SMB) protocol used for file and printer sharing. <br>
+_**➔ April 14-15 2017:**_ <br>
+The Shadow Brokers released offensive hacking tools stolen from the NSA. Included in the leak was the EternalBlue exploit. This exploit targeted a vulnerability in Microsoft’s Server Message Block (SMB) protocol used for file and printer sharing. <br>
 
-_**May 12, 2017:**_ <br>
-‣ WannaCry infections began spreading globally. <br>
+_**➔ May 12, 2017:**_ <br>
+WannaCry infections began spreading globally. <br>
 
-_**Propagation Phase:**_ <br>
-‣ WannaCry used the EternalBlue exploit to propagate through networks and infect vulnerable Windows systems.  <br>
+_**➔ Propagation Phase:**_ <br>
+WannaCry used the EternalBlue exploit to propagate through networks and infect vulnerable Windows systems.  <br>
 
-_**Impact Phase:**_ <br>
-‣ Victims' files were encrypted and users were presented with ransom demands of around $300 - $600 payable in Bitcoin. <br>
+_**➔ Impact Phase:**_ <br>
+Victims' files were encrypted and users were presented with ransom demands of around $300 - $600 payable in Bitcoin. <br>
 
-_**Containment:**_ <br>
-‣ Security researcher Marcus Hutchins accidentally discovered a kill switch domain within the malware’s code. Registering this domain halted the further spread of the ransomware. <br>
+_**➔ Containment:**_ <br>
+Security researcher Marcus Hutchins accidentally discovered a kill switch domain within the malware’s code. Registering this domain halted the further spread of the ransomware. <br>
 
-_**Post-Incident Response:**_ <br>
-‣ Microsoft released emergency security patches (MS17-010) to address the vulnerabilities exploited by WannaCry. Organizations accelerated vulnerability remediation efforts. <br>
+_**➔ Post-Incident Response:**_ <br>
+Microsoft released emergency security patches (MS17-010) to address the vulnerabilities exploited by WannaCry. Organizations accelerated vulnerability remediation efforts. <br>
 
 ---
 
-## Single Infection Lifecycle: From Initial Entry to File Encryption 
+<h2 style="color:#D4A017;">Single Infection Lifecycle: From Initial Entry to File Encryption</h2>
 
 | Step | Phase | Technical Action |
 | :--- | :--- | :--- |
@@ -83,15 +87,13 @@ _**Post-Incident Response:**_ <br>
 | **02** | **Exploitation** | Sends malicious SMBv1 packets utilizing the **EternalBlue** exploit (`CVE-2017-0144`). |
 | **03** | **Deployment** | Installs the **DoublePulsar** backdoor payload directly into kernel memory. |
 | **04** | **Execution** | DoublePulsar injects and executes the primary **WannaCry** ransomware payload. |
-| **05** | **Kill-Switch Check** | Malware attempts to connect to the hardcoded domain via HTTP. |
-| **06** | **Defense Evasion** | Drops a password-protected `.zip` file containing component binaries to disk. |
-| **07** | **Persistence** | Creates a Windows service named `mssecsvc2.0` to survive system reboots. |
-| **08** | **Lateral Movement** | Launches parallel threads to actively scan and infect adjacent network subnets. |
-| **09** | **Impact** | Spawns the file-encryption module, targets specific file extensions, and drops the ransom note. |
+| **05** | **Persistence** | Creates a Windows service named `mssecsvc2.0` to survive system reboots. |
+| **06** | **Lateral Movement** | Launches parallel threads to actively scan and infect adjacent network subnets. |
+| **07** | **Impact** | Spawns the file-encryption module, targets specific file extensions, and drops the ransom note. |
 
 ---
 
-## Attack Flow 
+<h2 style="color:#D4A017;">Attack Flow</h2>
 
 ```mermaid
 sequenceDiagram
@@ -113,7 +115,7 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 ---
 
-## [MITRE ATT&CK Matrix Mapping](https://attack.mitre.org/) 
+## [MITRE ATT&CK Matrix Mapping](https://attack.mitre.org/)
 
 <br> 
 
@@ -128,7 +130,7 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 ---
 
-## Threat Intelligence & MITRE ATT&CK Alignment 
+<h2 style="color:#D4A017;">Threat Intelligence & MITRE ATT&CK Alignment</h2>
 
 ### Key Assessment & Evasion Tactics: 
 WannaCry used strong encryption to hide its malicious activities and make it challenging to identify and analyze its payload (the key part of malware which contains the actual malicious code of the program). It used polymorphic/randomized file names for its components, making it more difficult for security tools to detect its presence. Some variants of WannaCry would self-delete to remove traces and evade detection after executing its malicious tasks. The cyberattack required minimal user interaction because the malware exploited a software vulnerability directly and bypassed typical human-targeted vectors. 
@@ -151,7 +153,8 @@ WannaCry used strong encryption to hide its malicious activities and make it cha
 
 ---
 
-## Incident Response Recommendations
+<h2 style="color:#D4A017;">Incident Response Recommendations</h2>
+
 If a WannaCry infection is identified: <br>
 
 ### Immediate Actions 
@@ -173,7 +176,7 @@ If a WannaCry infection is identified: <br>
 
 ---
 
-## Indicators of Compromise
+<h2 style="color:#D4A017;">Indicators of Compromise</h2>
 
 ### Malware Binaries: 
 A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security tools can scan for in endpoint logs to look for the presence of the WannaCry dropper and its core components. <br> 
@@ -198,9 +201,9 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 ---
 
-## Analyst Assessment 
+<h2 style="color:#D4A017;">Analyst Assessment </h2>
 
-WannaCry remains one of the most significant ransomware incidents in history due to its unique worm-like propagation and worldwide impact. The attack demonstrated how unpatched vulnerabilities can rapidly escalate into global operational disruptions across critical infrastructures. Analyzing WannaCry provides a practical baseline for utilizing the MITRE ATT&CK framework to map adversary behavior, optimize detection rules, and reinforce organizational resilience.
+WannaCry remains one of the most significant ransomware incidents in history. The attack demonstrated how unpatched vulnerabilities can rapidly escalate into global operational disruptions across critical infrastructures. Analyzing WannaCry provides a practical baseline for utilizing the MITRE ATT&CK framework to map adversary behavior, optimize detection rules, and reinforce organizational resilience.
 
 
 
