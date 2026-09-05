@@ -8,6 +8,10 @@ markdown: kramdown
 kramdown: 
   input: GFM
 
+#Allow diagrams
+mermaid:
+  version: "10.1.0"
+
 # GitHub Pages Settings
 plugins: 
   - jekyll-include-cache
