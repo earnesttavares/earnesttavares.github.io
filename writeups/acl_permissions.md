@@ -31,8 +31,6 @@ Separate department groups for IT, Marketing, and Finance were created. Users we
 
 To support collaboration while maintaining security, I used ACLs to grant selective access: 
 
-<br>
-
 1. Finance received read and execute access to Marketing resources.
 2. IT leadership was granted cross-department visibility.
 3. Specific users received elevated privileges when required for business operations.
@@ -54,8 +52,6 @@ I created a Bash script that automates the process of:
 
 This exercise demonstrated how routine administrative tasks can be automated to improve consistency, increase efficiency, and reduce the risk of manual configuration errors. 
 
-<br>
-
 1. Create group if it doesn't exist: <br>
    `groupadd $GROUPNAME`
 
@@ -76,8 +72,6 @@ This exercise demonstrated how routine administrative tasks can be automated to 
 <h2 style="color:#D4A017;">Example Commands</h2>
 
 These commands demonstrate how ACLs can be used to implement the principle of least privilege while supporting operational collaboration: 
-
-<br>
 
 1. Assign team members to their groups: <br>
    `sudo useradd -G Marketing Rhonda && sudo useradd -G Marketing Amanda && sudo useradd -G Marketing Gabe`
