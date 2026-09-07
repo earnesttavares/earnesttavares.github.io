@@ -7,7 +7,7 @@ has_children: true
 
 | **Project** | **Skill Area** | **What I Learned** | **Tools** |
 | :--- | :--- | :--- | :--- | 
-| WannaCry_Mitre | Threat Analysis | Mapped adversarial behaviors to ATT&CK techniques and identified TTPs. | MITRE ATT&CK |
-| ACL_Permissions | System Administration | Configured ACLs and automated permission management with Bash. | Linux, Bash | 
-| Cryptography_Hashing | Security Fundamentals | Explored hashing, encryption, and data integrity verification. | Linux, OpenSSL |
-| Splunk_Basics | Security Operations | Queried logs and investigated events using SPL searches. | Splunk | 
+| WannaCry & MITRE | Threat Analysis | Mapped adversarial behaviors to ATT&CK techniques and identified TTPs. | MITRE ATT&CK |
+| ACLs & Permissions | System Administration | Configured ACLs and automated permission management with Bash. | Linux, Bash | 
+| Cryptography & Hashing | Security Fundamentals | Explored hashing, encryption, and data integrity verification. | Linux, OpenSSL |
+| Splunk Basics | Security Operations | Queried logs and investigated events using SPL searches. | Splunk | 
