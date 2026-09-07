@@ -9,10 +9,10 @@ I'm an aspiring cybersecurity professional with a foundation in information secu
 
 <h1><span style="color:#a64c4b;">Certifications</span></h1> 
 
-* *Correlation One Information Security Analyst Program (Honors)* ◊ Jul 2026 <br>
-* *CompTIA Security+ (SY0‑701)* ◊ Jun 2026 <br>
-* *Adobe Analytics Business Practitioner (AD0‑E212)* ◊ Jun 2025 <br>
-* *Google Analytics 4 (GA4)* ◊ Dec 2024 <br>
+* Correlation One Information Security Analyst Program (Honors) ◊ *Jul 2026* <br>
+* CompTIA Security+ (SY0‑701) ◊ *Jun 2026* <br>
+* Adobe Analytics Business Practitioner (AD0‑E212) ◊ *Jun 2025* <br>
+* Google Analytics 4 (GA4) ◊ *Dec 2024* <br>
 
 <br>
 
