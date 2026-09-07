@@ -4,7 +4,7 @@ nav_order: 2
 ---
 
 <h1>
-<span style="color:#33aaff;">About Me 🔹</span>
+<span style="color:#33aaff;">About Me </span>
 <img src="https://img.shields.io/badge/Security%2B-ffffff?style=flat&labelColor=%23b30000"
 alt="Security+"
 style="margin:0 10px; vertical-align:middle;">
@@ -18,5 +18,5 @@ I'm an aspiring cybersecurity professional with a foundation in information secu
 <br>
 
 <div style="text-align: center;">
-  <a href="https://earnesttavares.github.io/resume" class="glow-link">(✎ Resume)</a>
+  <a href="https://earnesttavares.github.io/resume" class="glow-link">✎ Resume</a>
 </div>
