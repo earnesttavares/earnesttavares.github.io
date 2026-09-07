@@ -58,7 +58,7 @@ nav_order: 1
 
 </div>
 
-<h2><span style="border-bottom: 1px solid #ccc;">What I Do</span></h2>
+<h2><span style="border-bottom: 1px solid #ccc;">Areas of Focus</span></h2>
 
 ⟁ <strong><span style="color:#e0b33f;">Threat Analysis</span></strong> >> Log analysis, packet inspection, detection workflows 
 
@@ -66,8 +66,8 @@ nav_order: 1
 
 ⚙︎ <strong><span style="color:#e0b33f;">Tools & Environments</span></strong> >> Linux/WSL, Splunk, Snort, Wireshark, Volatility 3, Python, Nmap, Burp Suite
 
-⌁ I blend creative problem‑solving with technical precision to break down complex security challenges. 
-  
+<h2><span style="border-bottom: 1px solid #ccc;"> ⚿ About This Cyberfolio</span></h2>
+This Cyberfolio showcases projects, labs, and technical write-ups completed through formal training and independent study. It documents my ongoing learning journey and demonstrates the practical cybersecurity skills I've developed through hands-on experience. 
 
 <h2><span style="border-bottom: 1px solid #ccc;">Featured Work</span></h2>
 
