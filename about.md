@@ -5,33 +5,26 @@ nav_order: 2
 
 <h1><span style="color:#33aaff;">About Me</span></h1> 
 
-I’m a cybersecurity professional with a foundation built through formal study and hands‑on technical training. I completed **Correlation One’s Information Security Analyst Cohort 11** in July 2026, graduating with Honors, where I strengthened my skills in threat analysis, security operations, and structured problem‑solving. My background also includes certifications in Google GA4 Analytics, Adobe Analytics Business Practitioner (AD0‑E212), and CompTIA Security+ (SY0‑701), giving me a unique blend of data interpretation, system behavior analysis, and practical security control implementation.
+I'm an aspiring cybersecurity professional with a foundation in information security, data analytics, and hands-on technical training. I graduated with Honors from **Correlation One's Information Security Analyst Program, Cohort 11** and hold CompTIA Security+, Google Analytics, and Adobe Analytics certifications. I'm continuing to build practical experience through home lab projects, HTB, and OffSec training while preparing for the CySA+ exam. Currently seeking opportunities as a **Cybersecurity Analyst** or **Data Center Technician** where I can apply my training, grow through hands-on experience, and support critical systems. 
 
-I’m currently expanding my capabilities through additional certifications and real‑world lab work. My short‑term goals include preparing for CompTIA CySA+ and completing hands‑on training through HTB and OffSec to deepen my understanding of adversarial techniques, detection logic, and defensive strategy. Long‑term, I’m working toward the ISC2 CCSP to align my growth with cloud security architecture and scalable enterprise environments.
-
-In practice, I focus on analyzing misconfigurations, reducing exposure created by insecure defaults, improving monitoring coverage, and identifying early‑stage behaviors that map to potential attack paths. I’m seeking a role as a **Cybersecurity Analyst** or **Data Center Technician** where I can support critical systems, strengthen security posture, and build the practical experience needed to advance in both cybersecurity and infrastructure operations.
+<br>
 
 <div style="text-align:center; margin-top:20px;">
   <img src="https://img.shields.io/badge/Security%2B-ffffff?style=flat&labelColor=%23b30000" alt="Security+" style="margin:0 10px;">
   <img src="https://img.shields.io/badge/Kali%20Linux-557C94?logo=kalilinux&logoColor=fff" alt="Kali Linux" style="margin:0 10px;">
 </div>
 
-<h2><span style="color:#33aaff;">Professional Philosophy</span></h2> 
+<br>
 
-I’m focused on building secure, reliable systems and contributing to teams that value clarity and structure. I’m committed to continuous learning and bring a steady, collaborative approach that improves workflows, supports teammates, and strengthens a company’s security posture.
+<h2 style="color:#D4A017; text-align: center;">Certifications</h2> 
 
-<h2><span style="color:#33aaff;">Current Focus Areas</span></h2> 
-
-[✓] Building detection logic in lab environments
-
-[✓] Practicing memory forensics and incident triage
-
-[✓] Strengthening baseline hardening and secure configuration skills
-
-[✓] Developing proficiency in log analysis and alert triage to distinguish true security events from noise
+> **Correlation One Information Security Analyst Program (Honors)** ◦ Jan - Jul 2026 <br>
+> **CompTIA Security+ (SY0‑701)** ◦ Jun 2026 <br>
+> **Adobe Analytics Business Practitioner (AD0‑E212)** ◦ Jun 2025 <br>
+> **Google Analytics 4 (GA4)** ◦ Dec 2024 <br>
 
 <br>
 
 <div style="text-align: center;">
-  <a href="https://earnesttavares.github.io/resume" class="glow-link">[✎ Resume]</a>
+  <a href="https://earnesttavares.github.io/resume" class="glow-link">✎ Resume</a>
 </div>
