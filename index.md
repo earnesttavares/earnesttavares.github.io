@@ -17,12 +17,12 @@ nav_order: 1
 
 <h1 align="center">
   <!-- Line 1: Name -->
-  <span style="color:#8c0808;">
+  <span style="color:#D4A017;">
     Earnest Tavares
   </span>
 
   <!-- Line 2: Job Title -->
-  <div style="text-align:center; margin-top:10px; color:#8c0808;">
+  <div style="text-align:center; margin-top:10px; color:#D4A017;">
     Cybersecurity Analyst
   </div>
 
@@ -58,7 +58,7 @@ nav_order: 1
 
 </div>
 
-<h2><span style="color: #8c0808; border-bottom: 1px solid #B0E0E6;">Areas of Focus</span></h2>
+<h2><span style="color: #33aaff; border-bottom: 1px solid #B0E0E6;">Areas of Focus</span></h2>
 
 **Threat Analysis** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Log analysis, packet inspection, and detection workflows. 
