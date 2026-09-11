@@ -5,9 +5,9 @@ has_children: true
 ---
 <h1 style="color:#33aaff;">Writeups</h1> 
 
-| **Project** | **Skill Area** | **What I Learned** | **Tools** |
+| **Writeup** | **Skill Area** | **Lessons Learned** | **Tools** |
 | :--- | :--- | :--- | :--- | 
-| WannaCry & MITRE | Threat Analysis | Mapped adversarial behaviors to ATT&CK techniques and identified TTPs. | MITRE ATT&CK |
-| ACLs & Permissions | System Administration | Configured ACLs and automated permission management with Bash. | Linux, Bash | 
-| Cryptography & Hashing | Security Fundamentals | Explored hashing, encryption, and data integrity verification. | Linux, OpenSSL |
-| Splunk Basics | Security Operations | Queried logs and investigated events using SPL searches. | Splunk | 
+| WannaCry & MITRE | Threat Analysis | Mapped adversarial behaviors to the MITRE ATT&CK framework. | MITRE ATT&CK |
+| ACLs & Permissions | System Security / Admin | Configured ACLs to enforce least privilege and automated permission audits using Bash scripting. | Linux, Bash | 
+| Cryptography & Hashing | Security Fundamentals | Implemented data integrity verification protocols. Executed symmetric & asymmetric encryption and hashing operations. | Linux, OpenSSL |
+| Splunk Basics | Security Operations | Queried security logs, built monitoring dashboards, and investigated simulated events using SPL. | Splunk | 
