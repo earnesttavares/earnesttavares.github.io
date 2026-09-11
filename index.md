@@ -60,25 +60,31 @@ nav_order: 1
 
 <h2><span style="border-bottom: 1px solid #ccc;">Areas of Focus</span></h2>
 
-⟁ <strong><span style="color:#e0b33f;">Threat Analysis</span></strong> >> Log analysis, packet inspection, detection workflows 
+<strong><span style="color:#e0b33f;">Threat Analysis</span></strong> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Log analysis, packet inspection, and detection workflows. 
 
-🗁 <strong><span style="color:#e0b33f;">Hands‑On Labs</span></strong> >> Malware triage, memory forensics, incident response simulations 
+<strong><span style="color:#e0b33f;">Hands‑On Labs</span></strong> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Malware triage, memory forensics, and incident response simulations. 
 
-⚙︎ <strong><span style="color:#e0b33f;">Tools & Environments</span></strong> >> Linux/WSL, Splunk, Snort, Wireshark, Volatility 3, Python, Nmap, Burp Suite
+<strong><span style="color:#e0b33f;">Tools & Environments</span></strong> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Linux/WSL, Splunk, Snort, Wireshark, Volatility 3, Python, and Nmap.
 
-<h2><span style="color: #a64c4b; border-bottom: 1px solid #B0E0E6;"> ⚿ About This Cyberfolio</span></h2>
+---
 
-*This Cyberfolio showcases projects, labs, and technical write-ups completed through formal training and independent study. It documents my ongoing learning journey and demonstrates the practical cybersecurity skills I've developed through hands-on experience.* 
+<h2><span style="color: #a64c4b; border-bottom: 1px solid #B0E0E6;">About This Cyberfolio</span></h2>
+
+*This portfolio documents technical projects, labs, and write-ups completed through formal training and independent study. It showcases my ongoing learning journey and demonstrates practical cybersecurity skills developed through hands-on experience.* 
+
+---
 
 <h2><span style="border-bottom: 1px solid #ccc;">Featured Work</span></h2>
 
-Explore my cybersecurity projects, labs, and analyses:
 
 🌐 [Cybersecurity Home Lab Environment](projects/home_lab) <br>
 ▸ Hands‑on security lab built to practice defensive skills and analyze system telemetry. 
 
-🌐 [WannaCry Ransomware & MITRE ATT&CK Mapping](writeups/wannacry_mitre) <br>
-▸ A MITRE‑aligned breakdown of WannaCry’s attack behavior.
+🌐 [Threat Intelligence Report: WannaCry Ransomware](writeups/wannacry_mitre) <br>
+▸ A MITRE‑aligned behavioral breakdown of the WannaCry ransomware attack.
 
 <br>
 
