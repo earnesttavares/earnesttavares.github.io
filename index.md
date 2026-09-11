@@ -71,7 +71,7 @@ nav_order: 1
 
 ---
 
-<h2><span style="color: #a64c4b; border-bottom: 1px solid #B0E0E6;">About This Cyberfolio</span></h2>
+<h2><span style="color: #D4A017; border-bottom: 1px solid #B0E0E6;">About This Cyberfolio</span></h2>
 
 *This portfolio documents technical projects, labs, and write-ups completed through formal training and independent study. It showcases my ongoing learning journey and demonstrates practical cybersecurity skills developed through hands-on experience.* 
 
