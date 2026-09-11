@@ -58,15 +58,15 @@ nav_order: 1
 
 </div>
 
-<h2><span style="border-bottom: 1px solid #ccc;">Areas of Focus</span></h2>
+<h2><span style="color: #a64c4b; border-bottom: 1px solid #e0b33f;">Areas of Focus</span></h2>
 
-<strong><span style="color:#e0b33f;">Threat Analysis</span></strong> <br>
+**Threat Analysis** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Log analysis, packet inspection, and detection workflows. 
 
-<strong><span style="color:#e0b33f;">Hands‑On Labs</span></strong> <br>
+**Hands‑On Labs** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Malware triage, memory forensics, and incident response simulations. 
 
-<strong><span style="color:#e0b33f;">Tools & Environments</span></strong> <br>
+**Tools & Environments** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Linux/WSL, Splunk, Snort, Wireshark, Volatility 3, Python, and Nmap.
 
 ---
