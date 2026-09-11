@@ -58,7 +58,7 @@ nav_order: 1
 
 </div>
 
-<h2><span style="color: #a64c4b; border-bottom: 1px solid #e0b33f;">Areas of Focus</span></h2>
+<h2><span style="color: #D4A017; border-bottom: 1px solid #B0E0E6;">Areas of Focus</span></h2>
 
 **Threat Analysis** <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Log analysis, packet inspection, and detection workflows. 
