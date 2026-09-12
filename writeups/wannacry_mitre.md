@@ -8,46 +8,52 @@ nav_order: 1
 
 <br>
 
-Threat: *WannaCry Ransomware* <br>
-Date of Attack: *2017-05-12* <br>
-Analysis Type: *Malware Intelligence Assessment* <br>
-Framework: *MITRE ATT&CK* <br>
-Severity: <code style="color : red"> Critical </code> <br>
-TLP Status: *TLP: CLEAR* ⚪ <br>
+<h2>Executive Dashboard</h2>
+
+| Classification | Description | 
+| :--- | :--- | 
+| Threat | WannaCry Ransomware | 
+| Attack Date | May 12, 2017 | 
+| Severity | <code style="color : red"> Critical </code> | 
+| Attribution | Lazarus Group (APT 38) | 
+| Objective | File Encryption & Extortion | 
+| Impact | 250,000+ Systems Affected | 
+| Exploit | EternalBlue (CVE-2017-0144) | 
+| Mitigation | MS17-010, Disable SMBv1 | 
 
 <br>
 
-<h2 style="color:#D4A017;">Objective</h2>
-
-Analyze the WannaCry ransom attack  through the lens of threat intelligence and the MITRE ATT&CK framework. Identify adversary behaviors, IoCs, and recommend defensive measures.
-
 ---
 
-<h2 style="color:#D4A017;">Executive Summary</h2>
+<br> 
 
-WannaCry was a globally significant cyberattack that happened on May 12, 2017 and attributed to the North Korean state-sponsored threat group Lazarus (APT38). The ransomware spread rapidly across vulnerable Microsoft Windows systems by exploiting the ***EternalBlue (CVE-2017-0144)*** vulnerability within the Server Message Block (SMBv1) protocol over port 445. Once executed, WannaCry encrypted the victims' files and demanded payment in Bitcoin in exchange for decryption keys. Hours later, the discovery and registration of a hardcoded kill-switch domain put an end to the global attack.
+<h2>Executive Summary</h2>
 
-WannaCry impacted 250,000+ computers worldwide and severely impacted critical organizations such as healthcare, government agencies, and private enterprises, causing massive operational disruption, financial losses, and service outages. Analysis of the malware demonstrates the use of multiple MITRE ATT&CK techniques across the *Initial Access*, *Execution*, *Lateral Movement*, *Defense Evasion*, and *Impact* phases.
+This assessment analyzes the WannaCry ransomware attack through the lens of threat intelligence and the MITRE ATT&CK framework to identify adversary behaviors, IoCs, and defensive measures. The attack occurred on May 12, 2017 and is attributed to the North Korean state-sponsored threat group **Lazarus (APT38)**. The ransomware spread rapidly across vulnerable Microsoft Windows systems by exploiting the ***EternalBlue (CVE-2017-0144)*** vulnerability within the Server Message Block (SMBv1) protocol over port 445. Once executed, WannaCry encrypted the victims' files and demanded payment in Bitcoin in exchange for decryption keys. Hours later, the discovery and registration of a hardcoded kill-switch domain put an end to the global attack.
 
-<h3>
-  <span style="color:#33aaff;">Immediate Triage</span>
-</h3>
+WannaCry impacted **250,000+ computers worldwide** across critical infrastructures such as healthcare, government agencies, and private enterprises, causing massive operational disruption, financial losses, and service outages. Analysis of the malware demonstrates the use of multiple MITRE ATT&CK techniques across the *Initial Access*, *Execution*, *Lateral Movement*, *Defense Evasion*, and *Impact* phases.
 
-* **Isolate Hosts:** Disconnect infected or unpatched machines from the network 
-* **Block Port 445:** Restrict inbound and outbound SMB traffic at the firewall 
-* **Deploy Signatures:** Activate IDS/IPS rules for *CVE-2017-0144* detection 
+<br>
 
-<h3>
-  <span style="color:#33aaff;">Strategic Hardening</span>
-</h3>
+<h3>🔴 Immediate Response</h3>
 
-* Disable SMBv1 
-* Apply Critical Security Patch: *MS17-010* 
-* Enforce Air-Gapped Backups  
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Isolate infected hosts from network <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Block TCP 445 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Deploy IDS/IPS signatures <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Preserve evidence <br>
+
+
+<h3>🟡 Strategic Hardening</h3>
+
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Disable SMBv1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Apply MS17-010 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Segment networks <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Validate backups <br>
+&nbsp;&nbsp;&nbsp;&nbsp;▢ Deploy EDR <br>
   
 ---
 
-<h2 style="color:#D4A017;">Key Findings</h2>
+<h2>Key Findings</h2>
 
 | Category | Assessment |
 | :--- | :--- | 
@@ -63,34 +69,33 @@ WannaCry impacted 250,000+ computers worldwide and severely impacted critical or
 
 ---
 
-<h2 style="color:#D4A017;">Attack Timeline</h2>
+<br> 
 
-| Timestamp / Phase | Activity / TTP Observed |
-| :--- | :--- |
-| April 14-15 2017 | The Shadow Brokers released offensive hacking tools stolen from the NSA. Included in the leak was the EternalBlue exploit. This exploit targeted a vulnerability in Microsoft’s Server Message Block (SMB) protocol used for file and printer sharing. |
-| May 12, 2017 | WannaCry infections began spreading globally. |
-| Propagation Phase | WannaCry used the EternalBlue exploit to propagate through networks and infect vulnerable Windows systems. |
-| Impact | Victims' files were encrypted and users were presented with ransom demands of around $300 - $600 payable in Bitcoin. | 
-| Containment | Security researcher Marcus Hutchins accidentally discovered a kill switch domain within the malware’s code. Registering this domain halted the further spread of the ransomware. | 
-| Post-Incident Response | Microsoft released emergency security patches (MS17-010) to address the vulnerabilities exploited by WannaCry. Organizations accelerated vulnerability remediation efforts. | 
+<h2>Attack Timeline</h2>
+
+&nbsp;&nbsp;*April 2017* <br>
+│ <br>
+├── Shadow Brokers leak NSA tool, EternalBlue <br>
+│ <br>
+&nbsp;&nbsp;*May 12, 2017* <br>
+│ <br>
+├── WannaCry infections begin spreading globally <br>
+│ <br>
+├── Global SMB propagation through EternalBlue exploit <br>
+│ <br>
+├── Files were encrypted and victims presented with ransom demands <br>
+│ <br>
+&nbsp;&nbsp;*Containment Achieved* <br>
+│ <br>
+├── Kill switch discovered by Marcus Hutchins <br>
+│ <br>
+└── MS17-010 released by Microsoft <br>
+
+<br> 
 
 ---
 
-<h2 style="color:#D4A017;">Single Infection Lifecycle: From Initial Entry to File Encryption</h2>
-
-| Step | Phase | Technical Action |
-| :--- | :--- | :--- |
-| **01** | **Initial Access** | Malware scans the internet/local network for exposed **TCP Port 445**. |
-| **02** | **Exploitation** | Sends malicious SMBv1 packets utilizing the **EternalBlue** exploit (*CVE-2017-0144*). |
-| **03** | **Deployment** | Installs the **DoublePulsar** backdoor payload directly into kernel memory. |
-| **04** | **Execution** | DoublePulsar injects and executes the primary **WannaCry** ransomware payload. |
-| **05** | **Persistence** | Creates a Windows service named *mssecsvc2.0* to survive system reboots. |
-| **06** | **Lateral Movement** | Launches parallel threads to actively scan and infect adjacent network subnets. |
-| **07** | **Impact** | Spawns the file-encryption module, targets specific file extensions, and drops the ransom note. |
-
----
-
-<h2 style="color:#D4A017;">Attack Flow</h2>
+<h2>Attack Flow</h2>
 
 ```mermaid
 sequenceDiagram
@@ -112,6 +117,8 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 ---
 
+<br> 
+
 ## [MITRE ATT&CK Matrix Mapping](https://attack.mitre.org/)
 
 <br> 
@@ -124,6 +131,8 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 | Impact | [T1486](https://attack.mitre.org/techniques/T1486/) | Data Encrypted for Impact | Scans local and mapped network drives, encrypts a massive list of business-critical file extensions using AES-128 and RSA-2048 encryption algorithms, leaving a `.WNCRY` file extension. | 
 | Impact | [T1489](https://attack.mitre.org/techniques/T1489/) | Service Stop | WannaCry attempts to kill processes associated with Exchange, Microsoft SQL Server, and MySQL to make it possible to encrypt their data stores. | 
 | Impact | [T1490](https://attack.mitre.org/techniques/T1490/) | Inhibit System Recovery | WannaCry uses `vssadmin`, `wbadmin`, `bcdedit`, and `wmic` (native system tools) to delete and disable operating system recovery features. These actions reduced the likelihood of successful recovery without paying the ransom. |  
+
+<br> 
 
 ---
 
@@ -197,9 +206,8 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
   
 ---
 
-<h2 style="color:#D4A017;">Analyst Assessment</h2>
-
-WannaCry remains one of the most significant ransomware incidents in history. The attack demonstrated how unpatched vulnerabilities can rapidly escalate into global operational disruptions across critical infrastructures. Analyzing WannaCry provides a practical baseline for utilizing the MITRE ATT&CK framework to map adversary behavior, optimize detection rules, and reinforce organizational resilience.
+> <h2>Analyst Assessment</h2>
+> WannaCry demonstrates how a single unpatched vulnerability can escalate into global operational disruptions across critical infrastructures. Analyzing WannaCry provides a practical baseline for utilizing the MITRE ATT&CK framework to map adversary behavior, optimize detection rules, and reinforce organizational resilience.
 
 
 
