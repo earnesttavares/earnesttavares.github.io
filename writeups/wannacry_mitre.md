@@ -128,21 +128,21 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 *If a WannaCry infection is identified:* <br>
 
 ### 🔴 Immediate Actions 
-1. <input type="checkbox"> Disconnect affected hosts from the network. <br>
-2. <input type="checkbox"> Isolate infected systems. <br>
-3. <input type="checkbox"> Identify additional vulnerable devices. <br>
-4. <input type="checkbox"> Preserve forensic evidence. <br>
-5. <input type="checkbox"> Block known malicious indicators. <br>
-6. <input type="checkbox"> Apply Microsoft security patches (*MS17-010*). <br>
-7. <input type="checkbox"> Review backup integrity before restoration. <br>
+1. &ensp;<input type="checkbox"> Disconnect affected hosts from the network. <br>
+2. &ensp;<input type="checkbox"> Isolate infected systems. <br>
+3. &ensp;<input type="checkbox"> Identify additional vulnerable devices. <br>
+4. &ensp;<input type="checkbox"> Preserve forensic evidence. <br>
+5. &ensp;<input type="checkbox"> Block known malicious indicators. <br>
+6. &ensp;<input type="checkbox"> Apply Microsoft security patches (*MS17-010*). <br>
+7. &ensp;<input type="checkbox"> Review backup integrity before restoration. <br>
 
 ### 🟡 Long-Term Defenses 
-1. &nbsp;&nbsp;&nbsp;&nbsp;▢ Stay ahead of vulnerabilities with a fast patch management process. 
-2. &nbsp;&nbsp;&nbsp;&nbsp;▢ Disable SMBv1 where possible. 
-3. &nbsp;&nbsp;&nbsp;&nbsp;▢ Segment internal networks. 
-4. &nbsp;&nbsp;&nbsp;&nbsp;▢ Employ EDR.
-5. &nbsp;&nbsp;&nbsp;&nbsp;▢ Conduct regular backup validation. 
-6. &nbsp;&nbsp;&nbsp;&nbsp;▢ Monitor for lateral movement activity. 
+1. &ensp;<input type="checkbox"> Stay ahead of vulnerabilities with a fast patch management process. <br>
+2. &ensp;<input type="checkbox"> Disable SMBv1 where possible. <br>
+3. &ensp;<input type="checkbox"> Segment internal networks. <br>
+4. &ensp;<input type="checkbox"> Employ EDR. <br>
+5. &ensp;<input type="checkbox"> Conduct regular backup validation. <br>
+6. &ensp;<input type="checkbox"> Monitor for lateral movement activity. <br>
 
 <br>
 
