@@ -112,12 +112,12 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 | **Tactic** | **Technique ID** | **Technique Name** | **Behavior** | 
 | :--- | :--- | :--- | :--- |
-| **Initial Access** | [T1190](https://attack.mitre.org/techniques/T1190/) | Exploit Public-Facing Application | <details><summary>(Click to Expand)</summary>WannaCry gained access through the SMBv1 vulnerability exposed on vulnerable systems through port 445.</details> |  
-| **Lateral Movement** | [T1210](https://attack.mitre.org/techniques/T1210/) | Exploitation of Remote Services | <details><summary>(Click to Expand)</summary>WannaCry contains a thread that will attempt to scan for new attached drives every 10 seconds. If one is identified, it will encrypt the files on the attached device.</details> |       
-| **Defense Evasion** | [T1222.001](https://attack.mitre.org/techniques/T1222/) | File & Directory Permissions Modification: Windows Permissions | <details><summary>(Click to Expand)</summary>Executes `attrib +h` & `icacls . /grant Everyone:F /T /C /Q` to override standard Windows access control lists by making some of its files hidden and granting all users full access controls.</details> | 
-| **Impact** | [T1486](https://attack.mitre.org/techniques/T1486/) | Data Encrypted for Impact | <details><summary>(Click to Expand)</summary>Scans local and mapped network drives, encrypts a massive list of business-critical file extensions using AES-128 and RSA-2048 encryption algorithms, leaving a `.WNCRY` file extension.</details> | 
-| **Impact** | [T1489](https://attack.mitre.org/techniques/T1489/) | Service Stop | <details><summary>(Click to Expand)</summary>WannaCry attempts to kill processes associated with Exchange, Microsoft SQL Server, and MySQL to make it possible to encrypt their data stores.</details> | 
-| **Impact** | [T1490](https://attack.mitre.org/techniques/T1490/) | Inhibit System Recovery | <details><summary>(Click to Expand)</summary>WannaCry uses `vssadmin`, `wbadmin`, `bcdedit`, and `wmic` (native system tools) to delete and disable operating system recovery features. These actions reduced the likelihood of successful recovery without paying the ransom.</details> | 
+| **Initial Access** | [T1190](https://attack.mitre.org/techniques/T1190/) | Exploit Public-Facing Application | <details><summary>Click to Expand</summary>WannaCry gained access through the SMBv1 vulnerability exposed on vulnerable systems through port 445.</details> |  
+| **Lateral Movement** | [T1210](https://attack.mitre.org/techniques/T1210/) | Exploitation of Remote Services | <details><summary>Click to Expand</summary>WannaCry contains a thread that will attempt to scan for new attached drives every 10 seconds. If one is identified, it will encrypt the files on the attached device.</details> |       
+| **Defense Evasion** | [T1222.001](https://attack.mitre.org/techniques/T1222/) | File & Directory Permissions Modification: Windows Permissions | <details><summary>Click to Expand</summary>Executes `attrib +h` & `icacls . /grant Everyone:F /T /C /Q` to override standard Windows access control lists by making some of its files hidden and granting all users full access controls.</details> | 
+| **Impact** | [T1486](https://attack.mitre.org/techniques/T1486/) | Data Encrypted for Impact | <details><summary>Click to Expand</summary>Scans local and mapped network drives, encrypts a massive list of business-critical file extensions using AES-128 and RSA-2048 encryption algorithms, leaving a `.WNCRY` file extension.</details> | 
+| **Impact** | [T1489](https://attack.mitre.org/techniques/T1489/) | Service Stop | <details><summary>Click to Expand</summary>WannaCry attempts to kill processes associated with Exchange, Microsoft SQL Server, and MySQL to make it possible to encrypt their data stores.</details> | 
+| **Impact** | [T1490](https://attack.mitre.org/techniques/T1490/) | Inhibit System Recovery | <details><summary>Click to Expand</summary>WannaCry uses `vssadmin`, `wbadmin`, `bcdedit`, and `wmic` (native system tools) to delete and disable operating system recovery features. These actions reduced the likelihood of successful recovery without paying the ransom.</details> | 
 
 <br>
 
@@ -157,7 +157,8 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 <h2>Indicators of Compromise</h2>
 
-<details><summary>(Click to Expand)</summary>
+<details>
+<summary>Click to Expand</summary>
 
 ### Core Observed Behavior: 
 * Network scanning 
@@ -173,17 +174,17 @@ attrib +h
 icacls . /grant Everyone:F /T /C /Q
 # override standard permission restrictions (ACLs)  
 ```
-</details>
 
-<br>
+</details>
 
 ---
 
 <h2>Malware Hashes</h2>
 
-<details><summary>(Click to Expand)</summary>
+<details>
+<summary>Click to Expand</summary>
   
-A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security tools can scan for in endpoint logs to look for the presence of the WannaCry dropper and its core components. <br> 
+A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security tools can scan for in endpoint logs to look for the presence of the WannaCry dropper and its core components.  
 
 | Indicator Type | Cryptographic Hash Value | Artifact Description | 
 | --- | --- | --- | 
@@ -194,37 +195,34 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 </details>
 
-<br>
-
 ---
 
 <h2>Network Indicators</h2>
 
-<details><summary>(Click to Expand)</summary>
+<details>
+<summary>Click to Expand</summary>
 
-* <u>Target Ports:</u> TCP Port 445 (SMB) 
-* <u>Kill-Switch Domain Check:</u> Outbound HTTP requests over port 80 to:
+* *Target Ports:* TCP Port 445 (SMB) 
+* *Kill-Switch Domain Check:* Outbound HTTP requests over port 80 to:
   
 ``` bash 
 ://iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com
 ```
 
-* <u>Outbound Signatures:</u> Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
+* *Outbound Signatures:* Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
 
 </details>
-
-<br>
 
 ---
 
 <h2>Host-Based Artifacts</h2>
 
-<details><summary>(Click to Expand)</summary>
+<details><summary>Click to Expand</summary>
 
-* <u>Created Windows Service:</u> `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
-* <u>Ransom File Extension:</u> Appends `.WNCRY` to all successfully targeted files. 
-* <u>File Encryption Manager:</u> `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
-* <u>Dropped Ransom Note:</u> Creates text files named: `@Please_Read_Me@.txt`.
+* *Created Windows Service:* `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
+* *Ransom File Extension:* Appends `.WNCRY` to all successfully targeted files. 
+* *File Encryption Manager:* `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
+* *Dropped Ransom Note:* Creates text files named: `@Please_Read_Me@.txt`.
 
 </details>
 
