@@ -128,13 +128,13 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 *If a WannaCry infection is identified:* <br>
 
 ### 🔴 Immediate Actions 
-1. &nbsp;&nbsp;&nbsp;&nbsp;▢ Disconnect affected hosts from the network.
-2. &nbsp;&nbsp;&nbsp;&nbsp;▢ Isolate infected systems.
-3. &nbsp;&nbsp;&nbsp;&nbsp;▢ Identify additional vulnerable devices.
-4. &nbsp;&nbsp;&nbsp;&nbsp;▢ Preserve forensic evidence.
-5. &nbsp;&nbsp;&nbsp;&nbsp;▢ Block known malicious indicators.
-6. &nbsp;&nbsp;&nbsp;&nbsp;▢ Apply Microsoft security patches (*MS17-010*).
-7. &nbsp;&nbsp;&nbsp;&nbsp;▢ Review backup integrity before restoration.
+1. <input type="checkbox"> Disconnect affected hosts from the network. <br>
+2. <input type="checkbox"> Isolate infected systems. <br>
+3. <input type="checkbox"> Identify additional vulnerable devices. <br>
+4. <input type="checkbox"> Preserve forensic evidence. <br>
+5. <input type="checkbox"> Block known malicious indicators. <br>
+6. <input type="checkbox"> Apply Microsoft security patches (*MS17-010*). <br>
+7. <input type="checkbox"> Review backup integrity before restoration. <br>
 
 ### 🟡 Long-Term Defenses 
 1. &nbsp;&nbsp;&nbsp;&nbsp;▢ Stay ahead of vulnerabilities with a fast patch management process. 
@@ -158,7 +158,6 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 <h2>Indicators of Compromise</h2>
 
 <details markdown="block">
-    <summary class="text-delta">Click to Expand</summary>
 
 ### Core Observed Behavior: 
 * Network scanning 
@@ -182,9 +181,10 @@ icacls . /grant Everyone:F /T /C /Q
 <h2>Malware Hashes</h2>
 
 <details markdown="block">
-    <summary class="text-delta">Click to Expand</summary>
   
 A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security tools can scan for in endpoint logs to look for the presence of the WannaCry dropper and its core components.  
+
+<br>
 
 | Indicator Type | Cryptographic Hash Value | Artifact Description | 
 | --- | --- | --- | 
@@ -200,7 +200,6 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 <h2>Network Indicators</h2>
 
 <details markdown="block">
-    <summary class="text-delta">Click to Expand</summary>
 
 - **Target Ports:** TCP Port 445 (SMB) 
 - **Kill-Switch Domain Check:** Outbound HTTP requests over port 80 to:
@@ -218,7 +217,6 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 <h2>Host-Based Artifacts</h2>
 
 <details markdown="block">
-    <summary>Click to Expand</summary>
 
 - **Created Windows Service:** `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
 - **Ransom File Extension:** Appends `.WNCRY` to all successfully targeted files. 
