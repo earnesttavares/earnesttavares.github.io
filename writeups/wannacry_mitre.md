@@ -157,8 +157,8 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 <h2>Indicators of Compromise</h2>
 
-<details>
-<summary>Click to Expand</summary>
+<details markdown="block">
+    <summary class="text-delta">Click to Expand</summary>
 
 ### Core Observed Behavior: 
 * Network scanning 
@@ -181,8 +181,8 @@ icacls . /grant Everyone:F /T /C /Q
 
 <h2>Malware Hashes</h2>
 
-<details>
-<summary>Click to Expand</summary>
+<details markdown="block">
+    <summary class="text-delta">Click to Expand</summary>
   
 A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security tools can scan for in endpoint logs to look for the presence of the WannaCry dropper and its core components.  
 
@@ -199,17 +199,17 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 <h2>Network Indicators</h2>
 
-<details>
-<summary>Click to Expand</summary>
+<details markdown="block">
+    <summary class="text-delta">Click to Expand</summary>
 
-* *Target Ports:* TCP Port 445 (SMB) 
-* *Kill-Switch Domain Check:* Outbound HTTP requests over port 80 to:
+- **Target Ports:** TCP Port 445 (SMB) 
+- **Kill-Switch Domain Check:** Outbound HTTP requests over port 80 to:
   
 ``` bash 
 ://iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com
 ```
 
-* *Outbound Signatures:* Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
+- **Outbound Signatures:** Unauthorized outbound routing to Tor networks utilizing non-standard destination ports to connect with `.onion` payment verification gateways. 
 
 </details>
 
@@ -217,12 +217,13 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 <h2>Host-Based Artifacts</h2>
 
-<details><summary>Click to Expand</summary>
+<details markdown="block">
+    <summary>Click to Expand</summary>
 
-* *Created Windows Service:* `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
-* *Ransom File Extension:* Appends `.WNCRY` to all successfully targeted files. 
-* *File Encryption Manager:* `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
-* *Dropped Ransom Note:* Creates text files named: `@Please_Read_Me@.txt`.
+- **Created Windows Service:** `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
+- **Ransom File Extension:** Appends `.WNCRY` to all successfully targeted files. 
+- **File Encryption Manager:** `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
+- **Dropped Ransom Note:** Creates text files named: `@Please_Read_Me@.txt`.
 
 </details>
 
