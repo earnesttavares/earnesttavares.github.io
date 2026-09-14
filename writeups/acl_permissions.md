@@ -6,9 +6,7 @@ nav_order: 2
 
 <h1 style="color:#33aaff;">ACLs & Permissions</h1> 
 
-<span style="color:#D4A017;">*Access Control * Linux Administration * ACL Management * Bash Automation*</span>  
-
-<br>
+<span style="color:#D4A017;">*Access Control ✏ Linux Administration ✏ ACL Management ✏ Bash Automation*</span>  
 
 <h2>Overview</h2>
 
@@ -44,9 +42,7 @@ The environment was designed using the principle of least privilege while allowi
 
 <br>
 
-<h2>ACL Implementation Examples</h2> 
-
-<details markdown="block"><summary>View Command Examples</summary>
+<details markdown="block"><summary>View ACL Implementation Examples</summary>
 
 1. Assign team members to their groups:
 ``` bash 
