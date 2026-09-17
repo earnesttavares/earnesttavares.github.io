@@ -39,7 +39,7 @@ nav_order: 3
 
 🔸 Created a Test File: 
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 echo “This is my first Cybersecurity Lab” > file1.txt 
 ```
@@ -48,68 +48,80 @@ echo “This is my first Cybersecurity Lab” > file1.txt
 
 🔸 Generated a SHA-256 Hash Digest:
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 openssl sha256 file1.txt
 ```
 
-&emsp;**Terminal Output:**
+**Terminal Output:**
 ```text
 SHA2-256(file1.txt)= e9853110aca471a30c1610a2527f5d6551b168f6a2b88dfa6a891334a2d1fc21
 ```
 
-&emsp;**Observation:** OpenSSL generated a unique, fixed-length 256-bit hexadecimal string. This cryptographic digest serves as the file's unique digital fingerprint, proving that any future alteration to the underlying data block will disrupt the output. 
+<br>
+
+**Observation:** OpenSSL generated a unique, fixed-length 256-bit hexadecimal string. This cryptographic digest serves as the file's unique digital fingerprint, proving that any future alteration to the underlying data block will disrupt the output. 
 
 <br>
 
 🔸 Verified Hash Consistency Across Duplication:
-   
-&emsp;*Created a duplicate file:* <br>
 
-&emsp;**Command Execute:** 
+<br>
+
+*Created a duplicate file:* <br>
+
+**Command Execute:** 
 ``` bash
 cp file1.txt file2.txt
 ```
 
 <br>
 
-&emsp;*Hashed the copied file:* <br>
+*Hashed the copied file:* <br>
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 openssl sha256 file2.txt
 ```
-&emsp;**Terminal Output:**
+**Terminal Output:**
 ```text
 SHA2-256(file2.txt)= e9853110aca471a30c1610a2527f5d6551b168f6a2b88dfa6a891334a2d1fc21
 ```
 
-&emsp;**Observation:** The resulting hash output for `file2.txt` matched the digest of `file1.txt`. This confirms that mathematical hash functions operate strictly on raw data contents rather than file naming conventions or filesystem metadata attributes.
+<br>
+
+**Observation:** The resulting hash output for `file2.txt` matched the digest of `file1.txt`. This confirms that mathematical hash functions operate strictly on raw data contents rather than file naming conventions or filesystem metadata attributes.
 
 <br>
 
 🔸 Demonstrated Hash Sensitivity (The Avalanche Effect):
 
-&emsp;*Modified the original plaintext input. Added a (.) at the end of the sentence in file1.txt:* <br>
+<br>
 
-&emsp;**Command Execute:** 
+*Modified the original plaintext input. Added a (.) at the end of the sentence in file1.txt:* <br>
+
+**Command Execute:** 
 ``` bash
 nano file1.txt
 ```
 
-&emsp;*Re-generated the hash:* <br>
+<br>
 
-&emsp;**Command Execute:** 
+*Re-generated the hash:* <br>
+
+**Command Execute:** 
 ``` bash
 openssl sha256 file1.txt
 ```
 
-&emsp;**Terminal Output:**
+**Terminal Output:**
 ```text
 SHA2-256(file1.txt)= 704a9d8469aa553918cefc2c96b5c3eeac6aa49980cc9490870c80d64336787d
 ```
 
-&emsp;**Observation:** A single character modification generated an entirely unique hash, demonstrating the avalanche effect and hash sensitivity. This ensures robust data integrity because any minor manipulation to the data content radically transforms the cryptographic fingerprint, meaning any unauthorized tampering cannot be masked. 
+<br>
+
+**Observation:** A single character modification generated an entirely unique hash, demonstrating the avalanche effect and hash sensitivity. This ensures robust data integrity because any minor manipulation to the data content radically transforms the cryptographic fingerprint, meaning any unauthorized tampering cannot be masked. 
 
 </details>
 
@@ -125,7 +137,7 @@ SHA2-256(file1.txt)= 704a9d8469aa553918cefc2c96b5c3eeac6aa49980cc9490870c80d6433
 
 🔸 Created a Sensitive File:
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 echo “This is top secret information.” > secret.txt 
 ```
@@ -134,15 +146,16 @@ echo “This is top secret information.” > secret.txt
 
 🔸 Encrypted the Plaintext File Using AES-256-CBC:
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 openssl enc -aes-256-cbc -pbkdf2 -salt \ -in secret.txt \ -out secret.enc
 ```
-&emsp;*After entering the above command, the terminal prompts the user to enter a password. This password is used as the encryption key.*
+*After entering the above command, the terminal prompts the user to enter a password. This password is used as the encryption key.*
 
 <br>
 
-&emsp;*Syntax Analysis:* <br>
+*Syntax Analysis:*
+
 | Flag | Purpose |
 | :--- | :--- | 
 | openssl enc | Tells OpenSSL to use its encryption module | 
@@ -156,27 +169,31 @@ openssl enc -aes-256-cbc -pbkdf2 -salt \ -in secret.txt \ -out secret.enc
 
 🔸 Decrypted the File:
 
-&emsp;**Command Execute:** 
+**Command Execute:** 
 ``` bash
 openssl enc -d -aes-256-cbc -pbkdf2 \ -in secret.enc \ -out decrypted.txt
 ```
 
 <br>
 
-&emsp;*View Encrypted Ouput:* <br>
-&emsp;**Command Execute:** 
+*View Encrypted Ouput:* <br>
+**Command Execute:** 
 ``` bash
 cat decrypted.txt
 ```
 
-&emsp;*Result:* 
+<br>
 
-&emsp;**Terminal Output:** 
+*Result:* 
+
+**Terminal Output:** 
 ``` text
 "This is top secret information."
 ```
 
-&emsp;**Observation:** AES uses a shared secret key for both encryption and decryption. Successful recovery of the plaintext demonstrated how confidentiality depends on protecting the encryption key. 
+<br>
+
+**Observation:** AES uses a shared secret key for both encryption and decryption. Successful recovery of the plaintext demonstrated how confidentiality depends on protecting the encryption key. 
 
 </details>
 
@@ -192,16 +209,19 @@ cat decrypted.txt
 
 🔸 Generated an RSA Key Pair:
 
-&emsp;*Generated the Private Key:* 
+<br>
 
-&emsp;**Command Execute:** 
+*Generated the Private Key:* 
+
+**Command Execute:** 
 ``` bash
 openssl genpkey -algorithm RSA \ -out private.pem \ -pkeyopt rsa_keygen_bits:2048
 ```
 
 <br>
 
-&emsp;*Syntax Analysis:* <br>
+*Syntax Analysis:* 
+
 | Flag | Purpose | 
 | :--- | :--- | 
 | openssl genpkey | Uses OpenSSL’s key generation tool | 
@@ -211,7 +231,7 @@ openssl genpkey -algorithm RSA \ -out private.pem \ -pkeyopt rsa_keygen_bits:204
 
 <br>
 
-&emsp;**Terminal Output:**
+**Terminal Output:**
 ```text
 ....+..+...+.+.....+...+.+......+.....+....+..+....+...+........+..........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+.......+......+...........+.+..+............+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...+..+.+..+.......+...........+...+.......+..+......+....+..+.+............+...+.....+.............+...............+......+.....+.+..............+...+...+......................+........+...+....+..+.+.........+........+.+......+..............+.......+...+....................+.........+......+.+.....+.+.....+...+..............................+..........+..+...+....+..+...............+.+..+..................+....+.....+....+..+...+..........+...........+.........+.......+........+....+.....+......+.+.....+...+.+.........+...+.....+....+.....+....+..+..........+....................+...+..........+..+..................+.+.....+.+...+.....+....+...........+....+..+....+.........+..+...+.+..+.........+....+.........+.....+.+.........+..+...+.......+......+.....+.......+..................+...+.................+.......+......+..+....+...+...+.....+...+.......+...+............+........+......+..........+.....+.+.....+...+.........+..................+.......+...+........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+...+...+....+...+..+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.....+.+.........+.....+...............+......+...+.........+.+..+............+...+....+...........+...+.......+...............+..+.+.....+....+..+.+........+....+...+............+..+...+.......+...........+.............+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -223,16 +243,17 @@ RSA key generation completed successfully.
 
 <br>
 
-&emsp;*Then Extracted the Public Key:* 
+*Then Extracted the Public Key:* 
 
-&emsp;**Command Execute:**
+**Command Execute:**
 ``` bash
 openssl rsa -pubout \ -in private.pem \ -out public.pem
 ```
 
 <br>
 
-&emsp;*Syntax Analysis:* <br>
+*Syntax Analysis:* 
+
 | Flag | Purpose | 
 | :--- | :--- | 
 | openssl rsa | Uses OpenSSL’s RSA key management tool | 
@@ -242,7 +263,7 @@ openssl rsa -pubout \ -in private.pem \ -out public.pem
 
 <br>
 
-&emsp;**Terminal Output:**
+**Terminal Output:**
 ```text
 writing RSA key
 ```
@@ -251,7 +272,7 @@ writing RSA key
 
 🔸 Encrypted a Message Using the Public Key:
 
-&emsp;**Command Execute:**
+**Command Execute:**
 ``` bash
 echo “RSA encryption in action!” > message.txt 
 ```
@@ -260,14 +281,15 @@ echo “RSA encryption in action!” > message.txt
 
 🔸 Encrypted with Public Key:
 
-&emsp;**Command Execute:**
+**Command Execute:**
 ``` bash
 openssl pkeyutl -encrypt \ -pubin \ -inkey public.pem \ -in message.txt \ -out encrypted.bin
 ```
 
 <br>
 
-&emsp;*Syntax Analysis:* <br>
+*Syntax Analysis:* 
+
 | Flag | Purpose | 
 | :--- | :--- |
 | openssl pkeyutl | Uses OpenSSL’s public/private key utility tool | 
@@ -280,28 +302,32 @@ openssl pkeyutl -encrypt \ -pubin \ -inkey public.pem \ -in message.txt \ -out e
 
 🔸 Decrypted the Message with the Private Key:
 
-&emsp;**Command Execute:**
+**Command Execute:**
 ``` bash
 openssl pkeyutl -decrypt -inkey private.pem -in encrypted.bin -out decrypted.txt 
 ```
 
 <br>
 
-&emsp;*Displayed the Message:* 
+*Displayed the Message:* 
 
-&emsp;**Command Execute:**
+**Command Execute:**
 ``` bash
 cat decrypted.txt
 ```
 
-&emsp;*Result:* 
+<br>
 
-&emsp;**Terminal Output:**
+*Result:* 
+
+**Terminal Output:**
 ``` text
 RSA encryption in action!
 ```
 
-&emsp;**Observation:** The message could only be decrypted using the corresponding private key, demonstrating how public/private key pairs provide secure trust-based communication. 
+<br>
+
+**Observation:** The message could only be decrypted using the corresponding private key, demonstrating how public/private key pairs provide secure trust-based communication. 
 
 </details>
 
@@ -320,7 +346,7 @@ RSA encryption in action!
 * A one-character modification produced a completely different hash.
 * Demonstrated how SHA-256 can be used to verify file integrity and detect unauthorized modifications.
    
-&emsp;**Artifact:** [Image]
+&emsp;**Artifact:** 
 
 <br>
 
@@ -330,7 +356,7 @@ RSA encryption in action!
 * Successfully decrypted ciphertext using the correct password, demonstrating confidentiality through symmetric encryption. 
 * Confidentiality depends on proper key management.
   
-&emsp;**Artifact:** [Image]
+&emsp;**Artifact:**
 
 <br>
 
@@ -341,7 +367,7 @@ RSA encryption in action!
 * Used the corresponding private key to decrypt and recover the original plaintext. 
 * Demonstrated secure communication without sharing the private key.
 
-&emsp;**Artifact:** [Image]
+&emsp;**Artifact:** 
 
 <br> 
 
