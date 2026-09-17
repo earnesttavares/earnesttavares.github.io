@@ -29,6 +29,8 @@ nav_order: 3
 
 <h2>Step-by-Step Analysis</h2>
 
+<br>
+
 ### Part A: SHA-256 Hashing
 
 <details markdown="block"><summary>View Commands & Terminal Output</summary>
