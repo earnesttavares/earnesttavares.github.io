@@ -22,7 +22,7 @@ I configured Splunk to ingest Windows Event Logs and verified that the data was 
 
 <br>
 
-![Splunk Event Log Search](SplunkImage2.png)
+![Splunk Event Log Search](images/splunk-basics/SplunkImage2.png)
 
 *Figure 1: Querying Windows Event Logs in Splunk and reviewing indexed event data through the Search & Reporting application.*
 
@@ -32,7 +32,7 @@ I also validated data ingestion and indexing functionality by auditing internal 
 
 <br>
 
-![Splunk Security Event Search](SplunkImage1.png) 
+![Splunk Security Event Search](images/splunk-basics/SplunkImage1.png) 
 
 *Figure 2: Filtering Windows Security Event Logs in Splunk using SPL search queries.*
 
@@ -63,7 +63,7 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 
 <br>
 
-![Splunk Dashboard](SplunkImage3.png)
+![Splunk Dashboard](images/splunk-basics/SplunkImage3.png)
 
 *Figure 3: Splunk dashboard visualizing Windows security event frequency and event type distribution.*
 
@@ -73,10 +73,10 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 
 <h2>Key Concepts Learned</h2>
 
-* **Splunk Enterprise Architecture:** Identifying and interpreting standard Windows metadata and event tracking structures.
-* **Splunk Processing Language (SPL):** Utilizing statistical aggregation tools like `stats count by` and conditional sorting `sort -count` to transform raw logs into metrics.
-* **Windows Security Auditing:** Exploring Windows Event Logs and interpreting security event data to better understand system activity and auditing records. 
-* **Dashboard Creation & Data Visualization:** Building dashboards that turn raw log data into easily interpretable security metrics.
+* **<u>Splunk Enterprise Architecture:</u>** Identifying and interpreting standard Windows metadata and event tracking structures.
+* **<u>Splunk Processing Language (SPL):</u>** Utilizing statistical aggregation tools like `stats count by` and conditional sorting `sort -count` to transform raw logs into metrics.
+* **<u>Windows Security Auditing:</u>** Exploring Windows Event Logs and interpreting security event data to better understand system activity and auditing records. 
+* **<u>Dashboard Creation & Data Visualization:</u>** Building dashboards that turn raw log data into easily interpretable security metrics.
   
 <br>
 
