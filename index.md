@@ -80,7 +80,7 @@ nav_order: 1
 <h2><span style="border-bottom: 1px solid #ccc;">Featured Work</span></h2>
 
 
-🌐 [Cybersecurity Home Lab Environment](workshops/Attack_&_Defend_AWS) <br>
+🌐 [Cybersecurity Home Lab Environment](workshops/attack_&_defend_aws) <br>
 ▸ Hands‑on security lab built to practice defensive skills and analyze system telemetry. 
 
 🌐 [Threat Intelligence Report: WannaCry Ransomware](writeups/wannacry_mitre) <br>
