@@ -4,9 +4,7 @@ parent: Writeups
 nav_order: 2
 ---
 
-<h1 style="color:#33aaff;">ACLs & Permissions</h1> 
-
-<span style="color:#D4A017;">*Access Control ✏ Linux Administration ✏ ACL Management ✏ Bash Automation*</span>  
+<h1 style="color:#33aaff;">ACLs & Permissions</h1>  
 
 <h2>Overview</h2>
 
