@@ -42,6 +42,6 @@ collections:
   writeups: 
     output: true 
     permalink: /writeups/:name/
-  projects: 
+  workshops: 
     output: true 
-    permalink: /projects/:name/
+    permalink: /workshops/:name/
