@@ -12,5 +12,5 @@ I'm an aspiring **cybersecurity professional** with a foundation in information 
 Currently seeking opportunities as a **Cybersecurity Analyst** or **Data Center Technician** where I can support critical infrastructure and apply data-driven insights to protect organizational assets.
 
 <div style="text-align: center;">
-  <a href="https://earnesttavares.github.io/resume" class="glow-link">✎ Resume</a>
+  <a href="https://earnesttavares.github.io/resume" class="glow-link">🗎 Click Here for Resume</a>
 </div>
