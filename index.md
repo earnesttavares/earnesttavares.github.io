@@ -73,15 +73,15 @@ nav_order: 1
 
 <h2><span style="color: #33aaff; border-bottom: 1px solid #B0E0E6;">About This Cyberfolio</span></h2>
 
-*This portfolio documents technical projects, labs, and write-ups completed through formal training and independent study. It showcases my ongoing learning journey and demonstrates practical cybersecurity skills developed through hands-on experience.* 
+*This portfolio documents technical projects, labs, and workshops completed through formal training and independent study. It showcases my ongoing learning journey and demonstrates practical cybersecurity skills developed through hands-on experience.* 
 
 ---
 
 <h2><span style="border-bottom: 1px solid #ccc;">Featured Work</span></h2>
 
 
-🌐 [Cybersecurity Home Lab Environment](workshops/attack_&_defend_aws) <br>
-▸ Hands‑on security lab built to practice defensive skills and analyze system telemetry. 
+🌐 [Attack & Defend AWS](workshops/attack_&_defend_aws) <br>
+▸ Simulated an end-to-end AWS security incident, from SSRF exploitation and credential compromise to investigation, containment, and recovery. 
 
 🌐 [Threat Intelligence Report: WannaCry Ransomware](writeups/wannacry_mitre) <br>
 ▸ A MITRE‑aligned behavioral breakdown of the WannaCry ransomware attack.
