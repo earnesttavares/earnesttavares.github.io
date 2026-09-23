@@ -41,7 +41,7 @@ nav_order: 3
 
 **Command Execute:** 
 ``` bash
-echo “This is my first Cybersecurity Lab” > file1.txt 
+echo "This is my first Cybersecurity Lab" > file1.txt 
 ```
 
 <br>
@@ -139,7 +139,7 @@ SHA2-256(file1.txt)= 704a9d8469aa553918cefc2c96b5c3eeac6aa49980cc9490870c80d6433
 
 **Command Execute:** 
 ``` bash
-echo “This is top secret information.” > secret.txt 
+echo "This is top secret information." > secret.txt 
 ```
 
 <br>
@@ -148,7 +148,7 @@ echo “This is top secret information.” > secret.txt
 
 **Command Execute:** 
 ``` bash
-openssl enc -aes-256-cbc -pbkdf2 -salt \ -in secret.txt \ -out secret.enc
+openssl enc -aes-256-cbc -pbkdf2 -salt -in secret.txt -out secret.enc
 ```
 *After entering the above command, the terminal prompts the user to enter a password. This password is used as the encryption key.*
 
@@ -171,7 +171,7 @@ openssl enc -aes-256-cbc -pbkdf2 -salt \ -in secret.txt \ -out secret.enc
 
 **Command Execute:** 
 ``` bash
-openssl enc -d -aes-256-cbc -pbkdf2 \ -in secret.enc \ -out decrypted.txt
+openssl enc -d -aes-256-cbc -pbkdf2 -in secret.enc -out decrypted.txt
 ```
 
 <br>
@@ -215,7 +215,7 @@ cat decrypted.txt
 
 **Command Execute:** 
 ``` bash
-openssl genpkey -algorithm RSA \ -out private.pem \ -pkeyopt rsa_keygen_bits:2048
+openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
 ```
 
 <br>
@@ -247,7 +247,7 @@ RSA key generation completed successfully.
 
 **Command Execute:**
 ``` bash
-openssl rsa -pubout \ -in private.pem \ -out public.pem
+openssl rsa -pubout -in private.pem -out public.pem
 ```
 
 <br>
@@ -274,7 +274,7 @@ writing RSA key
 
 **Command Execute:**
 ``` bash
-echo “RSA encryption in action!” > message.txt 
+echo "RSA encryption in action!" > message.txt 
 ```
 
 <br>
@@ -283,7 +283,7 @@ echo “RSA encryption in action!” > message.txt
 
 **Command Execute:**
 ``` bash
-openssl pkeyutl -encrypt \ -pubin \ -inkey public.pem \ -in message.txt \ -out encrypted.bin
+openssl pkeyutl -encrypt -pubin -inkey public.pem -in message.txt -out encrypted.bin
 ```
 
 <br>
