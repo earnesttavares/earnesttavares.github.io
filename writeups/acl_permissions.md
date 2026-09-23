@@ -33,7 +33,7 @@ Linux Access Control Lists (ACLs) provide granular control over file and directo
 
 The environment was designed using the principle of least privilege while allowing controlled business collaboration between departments. 
 
-&emsp;☑ Segregated *IT*, *Marketing*, and *Finance* access <br>
+&emsp;☑ Separated *IT*, *Marketing*, and *Finance* access <br>
 &emsp;☑ Restricted access to sensitive departmental data <br>
 &emsp;☑ Enabled controlled cross-department collaboration <br>
 &emsp;☑ Granted temporary elevated permissions only when operationally required <br>
@@ -49,12 +49,12 @@ The environment was designed using the principle of least privilege while allowi
 
 2. Grant *Finance* group read (r) and execute (x) access to *Marketing* group:
 ``` bash
-   setfacl -m g:Finance:r-x Marketing
+   sudo setfacl -m g:Finance:r-x Marketing
 ```
 
-3. Grant a specific user full access:
+3. Grant a specific *user* full access:
 ``` bash 
-   setfacl -m u:Amanda:rwx Marketing
+   sudo setfacl -m u:Amanda:rwx Marketing
 ```
 
 4. Grant *IT* leadership cross-department visibility:
