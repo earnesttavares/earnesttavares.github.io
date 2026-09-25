@@ -33,10 +33,10 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 &ensp;A company that operates an AWS-hosted web app used to store "cloud formulas". The environment serves as the target infrastructure for this workshop. <br>
 
 * <strong style="color: #D4A017;">IAM user</strong> <br>
-&ensp;An AWS identity representing a person or application with <u>long-term credentials</u>. Users can authenticate using passwords or access keys. <br>
+&ensp;An AWS identity representing a person or application with *long-term credentials*. Users can authenticate using passwords or access keys. <br>
 
 * <strong style="color: #D4A017;">AWS IAM role</strong> <br>
-&ensp;An AWS identity that provides <u>temporary credentials</u> for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
+&ensp;An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
 
 * <strong style="color: #D4A017;">SSRF (Server-Side Request Forgery)</strong> <br>
 &ensp;A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints. <br>
@@ -78,6 +78,8 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 ---
 
 <h2>Objectives</h2>
+
+<br>
 
 Attacker's Perspective:
 * Identify vulnerabilities in the company's web application environment.
