@@ -8,10 +8,10 @@ nav_order: 1
 
 <br> 
 
-Workshop Type: Offensive Security, Defensive Security, and Incident Response in the Cloud <br>
-Platform: TryHackMe Community Event <br>
-Date Completed: 15 September 2026 <br>
-[Certification](/assets/certificates/thm-aws-cloud-breach.png) 
+<strong style="color: #D4A017;">Workshop Type:</strong> Offensive Security, Defensive Security & Incident Response in the Cloud <br>
+<strong style="color: #D4A017;">Platform:</strong> TryHackMe Community Event <br>
+<strong style="color: #D4A017;">Date Completed:</strong> 15 September 2026 <br>
+[Click to View Certification](/assets/certificates/thm-aws-cloud-breach.png) 
 
 <br>
 
@@ -25,22 +25,51 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 
 ---
 
-<h2>Additional Context</h2>
+<h2>Additional Information</h2>
 
 <details markdown="block"><summary>Expand to View</summary>
 
-* *CloudFactory* - 
-* *IAM roles/users* -
-* *Instances* - 
-* *SSRF* - 
-* *IMDSv1* - 
-* *IMDSv2* - 
-* *AWS EC2 Instances* -
-* *CloudTrail* - 
-* *CloudWatch* - 
-* *Lambdas* - 
-* *DynamoDB* -  
-* *AWS CloudShell* -
+* *CloudFactory* <br>
+&ensp;A company that operates an AWS-hosted web app used to store "cloud formulas". The environment serves as the target infrastructure for this workshop. <br>
+
+* *IAM user* <br>
+&ensp;An AWS identity representing a person or application with <u>long-term credentials</u>. Users can authenticate using passwords or access keys. <br>
+
+* *AWS IAM role* <br>
+&ensp;An AWS identity that provides <u>temporary credentials</u> for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
+
+* *SSRF (Server-Side Request Forgery)* <br>
+&ensp;A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints. <br>
+
+* *IMDS (Instance Metadata Service)* <br>
+&ensp;A feature available on EC2 instances that provides information about the instance, including network configuration, security groups, and IAM role credentials. It is accessible only from within the instance at `http://169.254.169.254/latest/meta-data/`. <br>
+  
+* *Security Groups* <br>
+&ensp;Virtual firewalls that control inbound and outbound traffic for AWS resources such as EC2 instances. Security groups are stateful and operate alongside network ACLs within a Virtual Private Cloud (VPC). <br>
+    
+* *IMDSv1* <br>
+&ensp;The original version of the IMDS. Vulnerable to SSRF attacks because an attacker can steal credentials with a simple, HTTP `GET` request. <br>
+  
+* *IMDSv2* <br>
+&ensp;Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed. <br>
+   
+* *AWS EC2 (Elastic Compute Cloud) Instance* <br>
+&ensp;A virtual computing environment in the cloud that allows users to configure and run scalable applications on AWS infrastructure. <br>
+  
+* *AWS CloudTrail* <br>
+&ensp;A logging and auditing service that records the actions performed within an AWS account, including API calls made by users, roles, and AWS services. Helps to answer the 'who' performed an action, 'what' action occurred, and 'when' it happened. <br>
+
+* *AWS CloudWatch* <br>
+&ensp;Monitoring service responsible for (Metrics, Logs, Alarms, Dashboards) and is used to monitor application and infrastructures performance. <br>
+  
+* *AWS Lambdas* <br>
+&ensp;Serverless service that allows users to run code without worrying about server management. <br>
+  
+* *AWS DynamoDB* <br>
+&ensp;Fully managed database service. <br>
+  
+* *AWS CloudShell* <br>
+&ensp;Fully managed Linux shell environment that provides authenticated command line access to AWS resources and tools. <br>
 
 </details>
 
@@ -88,7 +117,7 @@ awsLambdaInvoke(functionName, payload)
 
 <br>
 
-Using this vulnerable input field, I queried the EC2 Instance Metadata Service (IMDS) at `http://169.254.169.254/latest/meta-data/`, which returned a list of available metadata directories associated with the virtual machine. This confirmed that the application could issue requests to the EC2 Instance Metadata Service on behalf of an attacker, validating the SSRF vulnerability. Using `http://169.254.169.254/latest/meta-data/iam/security-credentials/` exposed an IAM role attached to the EC2 instance. Because IMDSv1 was enabled, temporary IAM role credentials could be retrieved without the authentication tokens enforced by IMDSv2. I then utilized AWS CLI to authenticate the stolen credentials and successfully perform a full database dump. 
+Using this vulnerable input field, I queried the EC2 Instance Metadata Service (IMDS) at `http://169.254.169.254/latest/meta-data/`, which returned a list of available metadata directories associated with the virtual machine. This confirmed that the application could issue requests to the EC2 Instance Metadata Service on behalf of an attacker, validating the SSRF vulnerability. Querying `http://169.254.169.254/latest/meta-data/iam/security-credentials/` exposed an IAM role attached to the EC2 instance. Because IMDSv1 was enabled, temporary IAM role credentials could be retrieved without the authentication tokens enforced by IMDSv2. I then utilized AWS CLI to authenticate the stolen credentials and successfully perform a full database dump. 
 
 <br>
 
@@ -116,6 +145,7 @@ Further investigation identified:
 Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpose-built alert enabled identification of the attack path, validation of credential abuse, and remediation actions to prevent additional data exfiltration. 
 
 <br>
+
 ---
 
 <h2 style="color:#ffeb33;">Incident Response</h2>
@@ -174,4 +204,4 @@ Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpos
 
 <h2>Key Takeaways</h2>
 
-This workshop demonstrated how a single web application vulnerability can turn into a significant cloud breach. I gained practical experience following the attacker's path from initial exploitation through to data exfiltration. Equally valuable was the defender phase, where I investigated logs, validated alerts, identified root causes, and implemented corrective actions. The workshop reinforced the importance of secure cloud configurations, the principle of least privilege, sanitized inputs, and the distinction between containment (revoke sessions) and eradication (fix the misconfigurations) during the incident response cycle. Overall, the workshop provided practical experience investigating and remediating a cloud security incident from initial compromise through recovery. 
+This workshop demonstrated how a single web application vulnerability can turn into a significant cloud breach. I gained practical experience following the attacker's path from initial exploitation through to data exfiltration. Equally valuable was the defender phase, where I investigated logs, validated alerts, identified root causes, and implemented corrective actions. The workshop reinforced the importance of secure cloud configurations, the principle of least privilege, sanitized inputs, and the distinction between containment (revoke sessions) and eradication (fix the misconfigurations) during the incident response cycle. Overall, the workshop provided practical experience investigating and remediating a cloud security incident from initial compromise to recovery. 
