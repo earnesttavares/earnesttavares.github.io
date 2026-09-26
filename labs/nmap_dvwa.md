@@ -61,8 +61,7 @@ docker start dvwa
 Before performing a scan, the IP address of a DVWA container is needed. The following command was used to obtain the target IP: <br>
 
 ```shell
-docker inspect dvwa --format
-'{{.NetworkSettings.Networks.bridge.IPAddress}}'
+docker inspect dvwa --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
 ```
 
 <br>
@@ -81,6 +80,10 @@ A ping aka ICMP sweep was used to verify that the target was reachable. It is a 
 
 ```shell
 nmap -sP 172.17.0.2
+# Legacy flag
+
+nmap -sn 172.17.0.2
+# Modern flag used in modern versions of Nmap
 ```
 
 <br>
@@ -163,7 +166,7 @@ Nmap's vulnerability scripts were used to identify potential weaknesses.
 <br>
 
 ```shell
-sudo nmap --script vuln 172.17.0.2.
+sudo nmap --script vuln 172.17.0.2
 ```
 
 <br>
@@ -183,7 +186,7 @@ Nmap did not directly confirm vulnerabilities such as SQL injection, CSRF, or XS
 
 <h3>WAF Detection</h3>
 
-A scan was conducted to determine if a WAF was protecting the DVWA instance.
+A scan was conducted to determine if a WAF was protecting the DVWA instance. This script works by sending intentionally malicious requests and looking for altered HTTP responses (like a 403 error or a dropped connection), which is why it flags potential IDS/IPS interference. 
 
 <br>
 
