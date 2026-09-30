@@ -8,9 +8,9 @@ nav_order: 1
 
 <br> 
 
-<strong style="color: #D4A017;">Workshop Type:</strong> Offensive Security, Defensive Security & Incident Response in the Cloud <br>
-<strong style="color: #D4A017;">Platform:</strong> TryHackMe Community Event <br>
-<strong style="color: #D4A017;">Date Completed:</strong> 15 September 2026 <br>
+<strong style="color: #33FF33;">Workshop Type:</strong> Offensive Security, Defensive Security & Incident Response in the Cloud <br>
+<strong style="color: #33FF33;">Platform:</strong> TryHackMe Community Event <br>
+<strong style="color: #33FF33;">Date Completed:</strong> 15 September 2026 <br>
 [Click to View Certification](/assets/certificates/thm-aws-cloud-breach.png) 
 
 <br>
@@ -29,47 +29,89 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 
 <details markdown="block"><summary>Expand to View</summary>
 
-* <strong style="color: #D4A017;">CloudFactory</strong> <br>
-&ensp;A company that operates an AWS-hosted web app used to store "cloud formulas". The environment serves as the target infrastructure for this workshop. <br>
+<br>
 
-* <strong style="color: #D4A017;">IAM user</strong> <br>
-&ensp;An AWS identity representing a person or application with *long-term credentials*. Users can authenticate using passwords or access keys. <br>
+CloudFactory <br>
 
-* <strong style="color: #D4A017;">AWS IAM role</strong> <br>
-&ensp;An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
+A company that operates an AWS-hosted web app used to store "cloud formulas". The environment serves as the target infrastructure for this workshop. <br>
 
-* <strong style="color: #D4A017;">SSRF (Server-Side Request Forgery)</strong> <br>
-&ensp;A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints. <br>
+<br>
 
-* <strong style="color: #D4A017;">IMDS (Instance Metadata Service)</strong> <br>
-&ensp;A feature available on EC2 instances that provides information about the instance, including network configuration, security groups, and IAM role credentials. It is accessible only from within the instance at `http://169.254.169.254/latest/meta-data/`. <br>
-  
-* <strong style="color: #D4A017;">Security Groups</strong> <br>
-&ensp;Virtual firewalls that control inbound and outbound traffic for AWS resources such as EC2 instances. Security groups are stateful and operate alongside network ACLs within a Virtual Private Cloud (VPC). <br>
-    
-* <strong style="color: #D4A017;">IMDSv1</strong> <br>
-&ensp;The original version of the IMDS. Vulnerable to SSRF attacks because an attacker can steal credentials with a simple, HTTP `GET` request. <br>
-  
-* <strong style="color: #D4A017;">IMDSv2</strong> <br>
-&ensp;Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed. <br>
-   
-* <strong style="color: #D4A017;">AWS EC2 (Elastic Compute Cloud) Instance</strong> <br>
-&ensp;A virtual computing environment in the cloud that allows users to configure and run scalable applications on AWS infrastructure. <br>
-  
-* <strong style="color: #D4A017;">AWS CloudTrail</strong> <br>
-&ensp;A logging and auditing service that records the actions performed within an AWS account, including API calls made by users, roles, and AWS services. Helps to answer the 'who' performed an action, 'what' action occurred, and 'when' it happened. <br>
+IAM user <br>
 
-* <strong style="color: #D4A017;">AWS CloudWatch</strong> <br>
-&ensp;Monitoring service responsible for (Metrics, Logs, Alarms, Dashboards) and is used to monitor application and infrastructures performance. <br>
-  
-* <strong style="color: #D4A017;">AWS Lambdas</strong> <br>
-&ensp;Serverless service that allows users to run code without worrying about server management. <br>
-  
-* <strong style="color: #D4A017;">AWS DynamoDB</strong> <br>
-&ensp;Fully managed database service. <br>
-  
-* <strong style="color: #D4A017;">AWS CloudShell</strong> <br>
-&ensp;Fully managed Linux shell environment that provides authenticated command line access to AWS resources and tools. <br>
+An AWS identity representing a person or application with *long-term credentials*. Users can authenticate using passwords or access keys. <br>
+
+<br>
+
+AWS IAM role <br>
+
+An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
+
+<br>
+
+SSRF (Server-Side Request Forgery) <br>
+
+A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints. <br>
+
+<br>
+
+IMDS (Instance Metadata Service) <br>
+
+A feature available on EC2 instances that provides information about the instance, including network configuration, security groups, and IAM role credentials. It is accessible only from within the instance at `http://169.254.169.254/latest/meta-data/`. <br>
+
+<br>
+
+Security Groups <br>
+
+Virtual firewalls that control inbound and outbound traffic for AWS resources such as EC2 instances. Security groups are stateful and operate alongside network ACLs within a Virtual Private Cloud (VPC). <br>
+
+<br>
+
+IMDSv1 <br>
+
+The original version of the IMDS. Vulnerable to SSRF attacks because an attacker can steal credentials with a simple, HTTP `GET` request. <br>
+
+<br>
+
+IMDSv2 <br>
+
+Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed. <br>
+
+<br>
+
+AWS EC2 (Elastic Compute Cloud) Instance <br>
+
+A virtual computing environment in the cloud that allows users to configure and run scalable applications on AWS infrastructure. <br>
+
+<br>
+
+AWS CloudTrail <br>
+
+A logging and auditing service that records the actions performed within an AWS account, including API calls made by users, roles, and AWS services. Helps to answer the 'who' performed an action, 'what' action occurred, and 'when' it happened. <br>
+
+<br>
+
+AWS CloudWatch <br>
+
+Monitoring service responsible for (Metrics, Logs, Alarms, Dashboards) and is used to monitor application and infrastructures performance. <br>
+
+<br>
+
+AWS Lambdas <br>
+
+Serverless service that allows users to run code without worrying about server management. <br>
+
+<br>
+
+AWS DynamoDB <br>
+
+Fully managed database service. <br>
+
+<br>
+
+AWS CloudShell <br>
+
+Fully managed Linux shell environment that provides authenticated command line access to AWS resources and tools. <br>
 
 </details>
 
