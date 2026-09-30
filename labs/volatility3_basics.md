@@ -97,24 +97,19 @@ As a member of the Digital Forensics & Incident Response (DFIR) team, the task w
 Downloaded the memory file and prepared the analysis environment:
 
 ```shell
-gdown https://drive.google.com/uc?id=1JKIxpj6q4_8rxcuNxYym5HpkfiJ2LISK
-# Downloaded the memory image
+gdown https://drive.google.com/uc?id=1JKIxpj6q4_8rxcuNxYym5HpkfiJ2LISK # Downloaded the memory image
 
-git clone https://github.com/volatilityfoundation/volatility3.git 
-# Cloned the Volatility 3 repository
+git clone https://github.com/volatilityfoundation/volatility3.git # Cloned the Volatility 3 repository
 
-mv victim.raw volatility3
-# Moved the memory image into the Volatility workspace
+mv victim.raw volatility3 # Moved the memory image into the Volatility workspace
 
-cd volatility3
-# Navigated to the project directory 
+cd volatility3 # Navigated to the project directory 
 ```
 
 Verified available Volatility3 plugins: 
 
 ```shell
-python3 vol.py -h
-# Reviewed available plugins (-h is for help) 
+python3 vol.py -h # Reviewed available plugins (-h is for help) 
 ```
 
 Launched Volatility 3 with the appropriate plugin(s):
@@ -137,10 +132,6 @@ To identify when the memory image was captured, I enumerated running processes u
 python3 vol.py -f victim.raw windows.pslist
 ```
 
-<br>
-
-<h3>💾 Key Finding</h3>
-
 The system timestamp contained within the memory image was: 
 
 ```text
@@ -158,10 +149,6 @@ The lab directed attention toward PID 1600 as part of the investigation workflow
 ```shell
 python3 vol.py -f victim.raw windows.handles --pid 1600
 ```
-
-<br>
-
-<h3>💾 Key Finding</h3>
 
 The process running under PID 1600 was: 
 
