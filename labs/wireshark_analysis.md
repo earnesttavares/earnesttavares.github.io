@@ -22,9 +22,9 @@ The purpose of this lab was to develop hands-on experience using Wireshark to ca
 
 * PCAP files provided in the lab exercises
 
-* Packet filtering & TCP stream analysis techniques
+* Wireshark Display Filters (e.g., `ip addr`, `http`, `smtp`) & TCP Stream Reassembly 
 
-* Protocol hierarchy & conversion statistics features within Wireshark
+* Wireshark Protocol Hierarchy Statistics & Conversations Menu 
 
 <br>
 
@@ -64,7 +64,7 @@ Analysis of the provided capture revealed:
 
 | **Metric** | **Result** | 
 | :--- | :--- | 
-| Total TCP Packets | 23,831 | 
+| Total Subset of TCP Packets | 23,831 | 
 | Packets Originating from Employee IP | 10,562 | 
 | Packets Destined for Employee IP | 24,625 | 
 | Total Packets in PCAP File Associated with Employee IP Address | 98.6% | 
@@ -100,7 +100,7 @@ The User-Agent string provided evidence about the source operating system and we
 
 TCP stream analysis was performed using the "Follow TCP Stream" feature. This allowed reconstruction of complete conversations between network endpoints, providing visibility into application-layer communications and session contents. 
 
-Frame analysis identified a frame length of 66 bytes within the selected TCP stream. Additionally, multiple retransmissions and communication anomalies were observed during packet inspection. 
+Frame analysis revealed a frame length of 66 bytes within the selected TCP stream, which represents empty TCP ACKs or keep-alive packets observed during the exfiltration session. Additionally, multiple retransmissions and communication anomalies were observed during packet inspection. 
 
 <br>
 
