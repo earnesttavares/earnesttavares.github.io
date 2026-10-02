@@ -43,7 +43,6 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 - AWS IAM Role: An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
 </details> 
 
-<br>
 
 <details>
 <summary><b>Vulnerabilities & Exploits</b></summary>
@@ -65,7 +64,6 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 - IMDSv2: Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed. <br>  
 </details>
 
-<br>
 
 <details>
 <summary><b>AWS Services Used</b></summary>
