@@ -12,7 +12,7 @@ nav_order: 1
 <br> 
 
 > ### Workshop Details 
-> - **Focus:** Offensive | Defensive | Incident Response
+> - **Focus:** Offensive, Defensive & Incident Response in the cloud
 > - **Environment:** AWS (EC2, CloudTrail, CloudWatch, Lambda, DynamoDB)
 > - **Platform:** TryHackMe Community Event
 > - **Completed:** 15 September 2026
@@ -27,47 +27,76 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 
 <br>
 
-<br>
+---
 
 ## Index 🕮
 
 <details>
 <summary><b>AWS Identity & Access Management</b></summary>
 
-* **AWS IAM user //** An AWS identity representing a person or application with *long-term credentials*. Users can authenticate using passwords or access keys.
+<br>
 
+- AWS IAM user: An AWS identity representing a person or application with *long-term credentials*. Users can authenticate using passwords or access keys. <br>
+
+<br>
   
-* **AWS IAM Role //** An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time.
+- AWS IAM Role: An AWS identity that provides *temporary credentials* for temporary access via the AWS Security Token Service (STS). AWS services, EC2 instances, applications, and users assume roles to obtain temporary access to resources. Can be shared with multiple people or applications over time. <br>
 </details> 
+
+<br>
 
 <details>
 <summary><b>Vulnerabilities & Exploits</b></summary>
+
+<br>
   
-* **SSRF (Server-Side Request Forgery) //** A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints.
+- SSRF (Server-Side Request Forgery): A web security vulnerability that allows an attacker to cause a server to make unintended requests on behalf of the attacker. This exploit targets internal infrastructures, firewalled systems, and cloud metadata endpoints. <br>
 
-* **IMDS (Instance Metadata Service) //** A feature available on EC2 instances that provides information about the instance, including network configuration, security groups, and IAM role credentials. It is accessible only from within the instance at `http://169.254.169.254/latest/meta-data/`.  
+<br>
 
-* **IMDSv1 //** The original version of the IMDS. Vulnerable to SSRF attacks because an attacker can steal credentials with a simple, HTTP `GET` request.
+- IMDS (Instance Metadata Service): A feature available on EC2 instances that provides information about the instance, including network configuration, security groups, and IAM role credentials. It is accessible only from within the instance at `http://169.254.169.254/latest/meta-data/`. <br>
 
-* **IMDSv2 //** Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed.  
+<br>
+
+- IMDSv1: The original version of the IMDS. Vulnerable to SSRF attacks because an attacker can steal credentials with a simple, HTTP `GET` request. <br>
+
+<br>
+
+- IMDSv2: Improved version of IMDS. Stops SSRF attacks by requiring a valid session token before metadata can be accessed. <br>  
 </details>
+
+<br>
 
 <details>
 <summary><b>AWS Services Used</b></summary>
 
-* **AWS CloudTrail //** A logging and auditing service that records the actions performed within an AWS account, including API calls made by users, roles, and AWS services. Helps to answer the 'who' performed an action, 'what' action occurred, and 'when' it happened.
+<br>
 
-* **AWS CloudWatch //** Monitoring service responsible for (Metrics, Logs, Alarms, Dashboards) and is used to monitor application and infrastructures performance.
+- AWS CloudTrail: A logging and auditing service that records the actions performed within an AWS account, including API calls made by users, roles, and AWS services. Helps to answer the 'who' performed an action, 'what' action occurred, and 'when' it happened. <br>
 
-* **AWS Lambdas //** Serverless service that allows users to run code without worrying about server management.
+<br>
 
-* **AWS DynamoDB //** Fully managed database service.
+- AWS CloudWatch: Monitoring service responsible for (Metrics, Logs, Alarms, Dashboards) and is used to monitor application and infrastructures performance. <br>
 
-* **AWS EC2 (Elastic Compute Cloud) Instance //** A virtual computing environment in the cloud that allows users to configure and run scalable applications on AWS infrastructure.
+<br>
 
-* **AWS CloudShell //** Fully managed Linux shell environment that provides authenticated command line access to AWS resources and tools.
+- AWS Lambdas: Serverless service that allows users to run code without worrying about server management. <br>
 
-* **Security Groups //** Virtual firewalls that control inbound and outbound traffic for AWS resources such as EC2 instances. Security groups are stateful and operate alongside network ACLs within a Virtual Private Cloud (VPC).     
+<br>
+
+- AWS DynamoDB: Fully managed database service. <br>
+
+<br>
+
+- AWS EC2 (Elastic Compute Cloud) Instance: A virtual computing environment in the cloud that allows users to configure and run scalable applications on AWS infrastructure. <br>
+
+<br>
+
+- AWS CloudShell: Fully managed Linux shell environment that provides authenticated command line access to AWS resources and tools. <br>
+
+<br>
+
+- Security Groups: Virtual firewalls that control inbound and outbound traffic for AWS resources such as EC2 instances. Security groups are stateful and operate alongside network ACLs within a Virtual Private Cloud (VPC). <br>     
 </details>
 
 <br>
@@ -141,7 +170,7 @@ Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpos
 
 <h2 style="color:#FF9900;">Incident Response</h2>
 
-<mark>Containment</mark> 
+<u>Containment</u> 
 
 * Edited inbound rules in Instance Security Group that removed public HTTPS access to prevent further interaction with the vulnerable application.
   
@@ -151,7 +180,7 @@ Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpos
 
 <br>
 
-<mark>Eradication</mark>
+<u>Eradication</u>
 
 * In the EC2 Instance Metadata Service, I configured the IMDSv2 settings from `optional` (allows both IMDSv1 & IMDSv2) to `required` (IMDSv2 only). This is to prevent future SSRF metadata exfiltration.
   
@@ -161,7 +190,7 @@ Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpos
 
 <br>
 
-<mark>Recovery</mark>
+<u>Recovery</u>
 
 * Restored HTTPS access rule in the Instance Security Group.
   
