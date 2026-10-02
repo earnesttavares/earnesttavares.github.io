@@ -12,7 +12,7 @@ nav_order: 1
 <br> 
 
 > ### Workshop Details 
-> - **Focus:** `Offensive` | `Defensive` | `Incident Response`
+> - **Focus:** Offensive | Defensive | Incident Response
 > - **Environment:** AWS (EC2, CloudTrail, CloudWatch, Lambda, DynamoDB)
 > - **Platform:** TryHackMe Community Event
 > - **Completed:** 15 September 2026
