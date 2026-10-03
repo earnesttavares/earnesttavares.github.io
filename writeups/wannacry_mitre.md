@@ -25,7 +25,8 @@ nav_order: 1
 
 ---
 
-<h2>Executive Summary</h2>
+<h2>Executive Summary 👾</h2>
+
 
 This assessment analyzes the WannaCry ransomware attack through the lens of threat intelligence and the MITRE ATT&CK framework to identify adversary behaviors, IoCs, and defensive measures. 
 
@@ -54,7 +55,7 @@ WannaCry impacted **250,000+ computers worldwide** across critical infrastructur
 
 ---
 
-<h2>Attack Timeline</h2>
+<h2>Attack Timeline ⚔️</h2>
 
 | Date | Event |
 | :--- | :--- |
