@@ -8,7 +8,7 @@ nav_order: 3
 
 <br>
 
-<h2>🗝 Objective 🗝</h2>
+<h2>Objective 🗝️</h2>
 
 
 **Cryptography is a foundational component of cybersecurity** that protects the confidentiality, integrity, and authenticity of information. It powers secure communication protocols like HTTPS, protects passwords, enables encrypted messaging, and forms the backbone of digital identity verification. This lab introduces core cryptographic concepts using OpenSSL, specifically exploring hashing, symmetric encryption, and asymmetric encryption. The objective was to demonstrate how these mechanisms validate data integrity and enforce strong access controls.  
@@ -17,7 +17,7 @@ nav_order: 3
 
 ---
 
-<h2>🗝 Lab Environment 🗝</h2>
+<h2>Lab Environment 🗝️</h2>
 
 * **Operating System**: Ubuntu Linux
 
@@ -29,11 +29,11 @@ nav_order: 3
 
 ---
 
-<h2>🗝 Step-by-Step Analysis 🗝</h2>
+<h2>🗝️ Step-by-Step Analysis</h2>
 
 <br>
 
-### Part A: SHA-256 Hashing
+<h3 style="color:#FFA500;">Part A: SHA-256 Hashing</h3>
 
 <details markdown="block"><summary>View Commands & Terminal Output</summary>
 
@@ -117,7 +117,7 @@ SHA2-256(file1.txt)= 704a9d8469aa553918cefc2c96b5c3eeac6aa49980cc9490870c80d6433
 
 --- 
 
-### Part B: AES-256 Encryption 
+<h3 style="color:#008000;">Part B: AES-256 Encryption</h3>
 
 <details markdown="block"><summary>View Commands & Terminal Output</summary>
 
@@ -185,7 +185,7 @@ cat decrypted.txt
 
 ---
 
-### Part C: RSA Encryption 
+<h3 style="color:#800080;">Part C: RSA Encryption</h3>
 
 <details markdown="block"><summary>View Commands & Terminal Output</summary>
 
@@ -309,11 +309,9 @@ RSA encryption in action!
 
 ---
 
-<h2>🗝 Key Findings & Artifacts 🗝</h2>
+<h2>Key Findings & Artifacts 🗝️</h2>
 
-<br>
-
-<u>Hashing</u> <br> 
+<h3>Hashing</h3> 
 
 * SHA-256 produces a unique digest for file content.
   
@@ -331,9 +329,7 @@ RSA encryption in action!
 
 <br>
 
----
-
-<u>AES Encryption</u> <br> 
+<h3>AES Encryption</h3> 
 
 * Encrypted plaintext into ciphertext.
   
@@ -349,9 +345,7 @@ RSA encryption in action!
 
 <br>
 
----
-
-<u>RSA Encryption</u> <br>
+<h3>RSA Encryption</h3>
 
 * Generated a 2048-bit public/private key pair.
   
@@ -371,7 +365,7 @@ RSA encryption in action!
 
 ---
 
-<h2>🗝 Security Impact 🗝</h2>
+<h2>Security Impact 🗝️</h2>
 
 Organizations rely on cryptographic controls to protect sensitive data and maintain trust in their systems. During this lab, SHA-256 hashing was used to validate data integrity by detecting file modifications. AES-256 encryption demonstrated how confidential information can be protected from unauthorized access, while RSA encryption illustrated how secure communications can occur through public and private key pairs. 
 
@@ -381,7 +375,7 @@ The concepts practiced in this exercise are foundational to technologies such as
 
 ---
 
-<h2>🗝 Skills Demonstrated 🗝</h2>
+<h2>Skills Demonstrated 🗝️</h2>
 
 * Cryptography Fundamentals
 * SHA-256 Hashing
@@ -394,6 +388,6 @@ The concepts practiced in this exercise are foundational to technologies such as
 
 ---
 
-<h2>🗝 Reflection 🗝</h2>
+<h2>Reflection 🗝️</h2>
 
 This lab demonstrated that effective cybersecurity extends beyond implementing technical controls and requires understanding the security principles they support. Hashing, symmetric encryption, and asymmetric encryption each serve distinct purposes, but together they help protect the confidentiality, integrity, and trustworthiness of information. Through hands-on use of OpenSSL, I developed a deeper understanding of how these cryptographic mechanisms work behind the technologies that organizations rely on daily to secure communications, validate software, and protect sensitive data. 
