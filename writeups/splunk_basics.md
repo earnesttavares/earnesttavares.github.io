@@ -8,7 +8,7 @@ nav_order: 4
 
 <br>
 
-<h2>Overview</h2>
+<h2 style="color:#60AB31;">Overview</h2>
 
 In this lab, I explored **Splunk** Enterprise, a SIEM platform used to collect, index, search, and visualize security data. The goal of this lab was to gain hands-on experience with Splunk by ingesting Windows Event logs, investigating security events, and creating dashboards that visualize activity a SOC analyst might monitor. 
 
@@ -16,7 +16,7 @@ In this lab, I explored **Splunk** Enterprise, a SIEM platform used to collect, 
 
 --- 
 
-<h2>Technical Implementation</h2>
+<h2 style="color:#60AB31;">Technical Implementation</h2>
 
 I configured Splunk to ingest Windows Event Logs and verified that the data was being indexed correctly through the Search & Reporting application. I explored how Splunk organizes data through indexes, sources, sourcetypes, and hosts, which helped me better understand how analysts filter, search, and investigate log data.
 
@@ -56,7 +56,7 @@ index=main sourcetype="wineventlog:security" | stats count by EventType | sort -
 
 ---
 
-<h2>Dashboard Development</h2>
+<h2 style="color:#60AB31;">Dashboard Development</h2>
 
 After identifying key log patterns, I built an interactive dashboard to turn raw log data into actionable security metrics. I converted the statistical query outputs into visual dashboard panels. 
 
@@ -78,7 +78,7 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 
 --- 
 
-<h2>Key Concepts Learned</h2>
+<h2 style="color:#60AB31;">Key Concepts Learned</h2>
 
 * **Splunk Enterprise Architecture:** Identifying and interpreting standard Windows metadata and event tracking structures.
   
@@ -92,7 +92,7 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 
 ---
 
-<h2>Skills Demonstrated</h2>
+<h2 style="color:#60AB31;">Skills Demonstrated</h2>
 
 * Ingesting and indexing Windows Event Logs within Splunk.
   
@@ -106,7 +106,7 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 
 ---
 
-<h2>Key Takeaways</h2>
+<h2 style="color:#60AB31;">Key Takeaways</h2>
 
 This lab gave me hands-on experience with the core functions of a SIEM platform, from log ingestion and search to dashboard creation and visualization. By working with Windows Event Logs and writing SPL queries, I learned how security teams can transform raw event data into meaningful insights that support monitoring, investigation, and incident response. 
 
