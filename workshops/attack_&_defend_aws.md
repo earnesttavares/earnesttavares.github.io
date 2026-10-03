@@ -147,16 +147,26 @@ Using this vulnerable input field, I queried the EC2 Instance Metadata Service (
 
 <br>
 
+<details markdown="block"><summary>View Images</summary>
+  
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
-  <div style="flex: 1; min-width: 280px; text-align: center;">
-    <img src="/workshops/images/web_application_code.png" alt="Reviewing Web Application Code Using Inspect Tool" style="width: 100%; border: 1px solid #444;">
-    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Unsanitized input and dead code pointing to a backend Lambda function susceptible to SSRF.</span>
-  </div>
+  
+<div style="width: 45%; text-align: center;">
+    <img src="/workshops/images/web_application_code.png" alt="Reviewing Web Application Code Using Inspect Tool" style="width: 100%; height: auto; border: 1px solid #444; border-radius: 4px;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 8px; text-align: left; line-height: 1.4;">
+      Figure 2: Unsanitized input and dead code pointing to a backend Lambda function susceptible to SSRF.
+    </span>
+  </div> 
+  
+  <br>
+  <br>
+  
   <div style="flex: 1; min-width: 280px; text-align: center;">
     <img src="/workshops/images/lamba_invocation.png" alt="Access to Sensitive Data Using Temporary Credentials" style="width: 100%; border: 1px solid #444;">
-    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Exploited an SSRF vulnerability to retrieve EC2 metadata (IMDSv1) and temporary AWS credentials. Using AWS CloudShell, the temporary credentials were leveraged to invoke a Lambda function and gain access to CloudFactory's sensitive data stored in DynamoDB.</span>
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Figure 3: Exploited an SSRF vulnerability to retrieve EC2 metadata (IMDSv1) and temporary AWS credentials. Using AWS CloudShell, the temporary credentials were leveraged to invoke a Lambda function and gain access to CloudFactory's sensitive data stored in DynamoDB.</span>
   </div>
 </div>
+</details>
 
 ---
 
@@ -182,6 +192,27 @@ Further investigation identified:
 Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpose-built alert enabled identification of the attack path, validation of credential abuse, and remediation actions to prevent additional data exfiltration. 
 
 <br>
+
+<details markdown="block"><summary>View Images</summary>
+  
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+  
+<div style="width: 45%; text-align: center;">
+    <img src="/workshops/images/cloudwatch_dashboard.png" alt="Two Alerts on CloudWatch Dashboard" style="width: 100%; height: auto; border: 1px solid #444; border-radius: 4px;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 8px; text-align: left; line-height: 1.4;">
+      Figure 4: Lambda invocation activity outside the expected scope and GetCallerIdentity reconnaissance alerts indicated a potential security breach. 
+    </span>
+  </div> 
+  
+  <br>
+  <br>
+  
+  <div style="flex: 1; min-width: 280px; text-align: center;">
+    <img src="/workshops/images/insecure_code_block.png" alt="Correlation Between the Attacker and Insecure Code Block" style="width: 100%; border: 1px solid #444;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Figure 5: The defender identified how the attacker exploited the application to access the database. To eradicate the threat, IMDSv2 was enabled and the vulnerable Lambda function code path was disabled. Recovery involved restored the HTTPS rule in the instance security group.</span>
+  </div>
+</div>
+</details>
 
 ---
 
@@ -214,6 +245,14 @@ Correlating CloudWatch logs, CloudTrail event history, Lambda code, and a purpos
 * Validated application functionality after restoring HTTPS access and confirmed that security controls remained effective.
   
 * Confirmed that SSRF attacks could no longer retrieve instance credentials.
+
+<br>
+
+<p align="center">
+  <img src="/workshops/images/imdsv2_enforced.png" alt="Vulnerabilities Resolved" width="80%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 6: Following containment and recovery efforts, testing verified that the SSRF attack path was no longer exploitable after IMDSv2 enforcement.</em> 
+</p> 
 
 <br>
 
