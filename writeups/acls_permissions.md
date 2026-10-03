@@ -18,11 +18,11 @@ Linux Access Control Lists (ACLs) provide granular control over file and directo
 
 | *Security Domain* | *Commands/Concepts* | *Application* | 
 | :--- | :--- | :--- | 
-| *User & Group Administration* | `useradd` & `groupadd` | Created users and organized departmental access groups | 
-| *Ownership Management* | `chown` & `chgrp` | Assigned proper ownership of files and directories | 
-| *Permission Management* | `chmod` | Enforced least privilege access controls | 
-| *ACL Configuration* | `setfacl` | Granted granular access beyond standard Linux permissions | 
-| *ACL Auditing* | `getfacl` | Verified and reviewed ACL assignments | 
+| *User & Group Administration* | useradd & groupadd | Created users and organized departmental access groups | 
+| *Ownership Management* | chown & chgrp | Assigned proper ownership of files and directories | 
+| *Permission Management* | chmod | Enforced least privilege access controls | 
+| *ACL Configuration* | setfacl | Granted granular access beyond standard Linux permissions | 
+| *ACL Auditing* | getfacl | Verified and reviewed ACL assignments | 
 | *Access Control Design* | Linux RBAC Concepts | Implemented RBAC based on department  | 
 
 <br>
@@ -124,9 +124,13 @@ To improve consistency and reduce the risk of manual configuration errors, I cre
 <h2>Results</h2>
 
 * Implemented department-based access controls. <br>
+
 * Applied least-privilege permissions. <br>
+
 * Enabled secure cross-department collaboration. <br>
+
 * Configured user-specific ACL exceptions. <br>
+
 * Automated repetitive user provisioning tasks. <br> 
 
 <br>
