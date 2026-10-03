@@ -4,7 +4,7 @@ parent: Writeups
 nav_order: 4
 ---
 
-<h1 style="color:#33aaff;">Splunk Fundamentals: Log Analysis & Dashboard Visualization</h1>
+<h1 style="color:#60AB31;">Splunk Fundamentals: Log Analysis & Dashboard Visualization</h1>
 
 <br>
 
@@ -22,9 +22,11 @@ I configured Splunk to ingest Windows Event Logs and verified that the data was 
 
 <br>
 
-![Splunk Event Log Search](images/splunk-basics/SplunkImage2.png)
-
-*Figure 1: Querying Windows Event Logs in Splunk and reviewing indexed event data through the Search & Reporting application.*
+<p align="center">
+  <img src="/writeups/images/splunk_search_query_results.png" alt="Splunk Search Query" width="40%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 1: Querying Windows Event Logs in Splunk and reviewing indexed event data through the Search & Reporting application.</em>
+</p>
 
 <br>
 
@@ -32,9 +34,11 @@ I also validated data ingestion and indexing functionality by auditing internal 
 
 <br>
 
-![Splunk Security Event Search](images/splunk-basics/SplunkImage1.png) 
-
-*Figure 2: Filtering Windows Security Event Logs in Splunk using SPL search queries.*
+<p align="center">
+  <img src="/writeups/images/splunk_application_log_search.png" alt="Splunk Security Event Search" width="40%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 2: Filtering Windows Security Event Logs in Splunk using SPL search queries.</em>
+</p>
 
 <br>
 
@@ -59,13 +63,16 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 <br>
 
 * **<u>Security Event Distribution (by EventCode):</u>** Converted the `stats count by EventCode` search into a dashboard panel that visualizes event frequency by EventCode, helping identify the most frequently occurring security events.
+  
 * **<u>Authentication & Log Type Breakdown (by EventType):</u>** Leveraged the `stats count by EventType` dataset to create a pie chart visualization, providing a quick view of the distribution of event types within the collected Windows security logs. 
 
 <br>
 
-![Splunk Dashboard](images/splunk-basics/SplunkImage3.png)
-
-*Figure 3: Splunk dashboard visualizing Windows security event frequency and event type distribution.*
+<p align="center">
+  <img src="/writeups/images/splunk_monitoring_dashboard.png" alt="Splunk Dashboard" width="40%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 3: Splunk dashboard visualizing Windows security event frequency and event type distribution.</em>
+</p>
 
 <br>
 
@@ -74,8 +81,11 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 <h2>Key Concepts Learned</h2>
 
 * **<u>Splunk Enterprise Architecture:</u>** Identifying and interpreting standard Windows metadata and event tracking structures.
+  
 * **<u>Splunk Processing Language (SPL):</u>** Utilizing statistical aggregation tools like `stats count by` and conditional sorting `sort -count` to transform raw logs into metrics.
-* **<u>Windows Security Auditing:</u>** Exploring Windows Event Logs and interpreting security event data to better understand system activity and auditing records. 
+  
+* **<u>Windows Security Auditing:</u>** Exploring Windows Event Logs and interpreting security event data to better understand system activity and auditing records.
+  
 * **<u>Dashboard Creation & Data Visualization:</u>** Building dashboards that turn raw log data into easily interpretable security metrics.
   
 <br>
@@ -85,8 +95,11 @@ After identifying key log patterns, I built an interactive dashboard to turn raw
 <h2>Skills Demonstrated</h2>
 
 * Ingesting and indexing Windows Event Logs within Splunk.
+  
 * Writing SPL queries to aggregate and analyze security events.
+  
 * Investigating Windows security telemetry through event frequency and distribution analysis.
+  
 * Building dashboards to visualize and summarize security log data. 
 
 <br>
