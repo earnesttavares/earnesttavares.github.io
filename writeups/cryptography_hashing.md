@@ -323,9 +323,15 @@ RSA encryption in action!
   
 * Demonstrated how SHA-256 can be used to verify file integrity and detect unauthorized modifications.
    
-&emsp;**Artifact:** 
+<p align="center">
+  <img src="/writeups/images/hashing_example.png" alt="An Example of Hashing" width="40%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 1: An example of the Avalanche Effect in Hashing. After adding a single period to the text file, a completely different SHA-256 hash was generated.</em>
+</p> 
 
 <br>
+
+---
 
 <u>AES Encryption</u> <br> 
 
@@ -335,9 +341,15 @@ RSA encryption in action!
   
 * Confidentiality depends on proper key management.
   
-&emsp;**Artifact:**
+<p align="center">
+  <img src="/writeups/images/aes_encryption_example.png" alt="An Example of AES Encryption" width="80%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 2: The resulting encrypted file displayed unreadable ciphertext, demonstrating how encryption protects confidentiality. Using the correct password, the encrypted file can be decrypted to recover the original plaintext.</em>
+</p>
 
 <br>
+
+---
 
 <u>RSA Encryption</u> <br>
 
@@ -349,7 +361,11 @@ RSA encryption in action!
   
 * Demonstrated secure communication without sharing the private key.
 
-&emsp;**Artifact:** 
+<p align="center">
+  <img src="/writeups/images/rsa_key_creation.png" alt="An Example of RSA Key Creation" width="80%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 3: An RSA private key was generated using OpenSSL and stored in private.pem. This generated key can be used to derive a public key and support authentication and integrity verification through digital signatures.</em>
+</p>
 
 <br> 
 
