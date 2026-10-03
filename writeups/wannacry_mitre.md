@@ -4,7 +4,7 @@ parent: Writeups
 nav_order: 1
 ---
 
-<h1 style="color:#33aaff;">Threat Intelligence Report: WannaCry Ransomware</h1> 
+<h1 style="color:#7A0200;">Threat Intelligence Report: WannaCry Ransomware</h1> 
 
 <br>
 
@@ -96,10 +96,15 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 <h2>Observed TTPs</h2>
 
 * Network Scanning
+  
 * Automated Exploitation
+  
 * Self-Propagation
+  
 * SMB-Based Lateral Movement
+  
 * File Encryption
+  
 * Recovery Inhibition 
 
 <br>
@@ -155,13 +160,13 @@ Note over Victim: 9. Impact: Spawns Encryption Module & Ransom Note [T1489, T149
 
 ---
 
-<h2>Indicators of Compromise</h2>
+<h2>🚩 Indicators of Compromise</h2>
 
 <details markdown="block">
 
 ### Core Observed Behavior: 
-* Network scanning 
-* Automated exploitation 
+* Network scanning
+* Automated exploitation
 * Self-propagation 
 * Rapid lateral movement across internal subnets 
 
@@ -178,7 +183,7 @@ icacls . /grant Everyone:F /T /C /Q
 
 ---
 
-<h2>Malware Hashes</h2>
+<h2>🧬 Malware Hashes</h2>
 
 <details markdown="block">
   
@@ -197,7 +202,7 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 ---
 
-<h2>Network Indicators</h2>
+<h2>🌐 Network Indicators</h2>
 
 <details markdown="block">
 
@@ -214,13 +219,16 @@ A quick-reference database of high-fidelity SHA-256 and MD5 hashes that security
 
 ---
 
-<h2>Host-Based Artifacts</h2>
+<h2>🏺 Host-Based Artifacts</h2>
 
 <details markdown="block">
 
-- **Created Windows Service:** `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service 
-- **Ransom File Extension:** Appends `.WNCRY` to all successfully targeted files. 
-- **File Encryption Manager:** `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files. 
+- **Created Windows Service:** `mssecsvc2.0`. Display Name: Microsoft Security Center (2.0) Service
+  
+- **Ransom File Extension:** Appends `.WNCRY` to all successfully targeted files.
+  
+- **File Encryption Manager:** `tasksche.exe` searches local file system for specific file extensions, generates AES keys, and begins scrambling the data into `.WNCRY` files.
+  
 - **Dropped Ransom Note:** Creates text files named: `@Please_Read_Me@.txt`.
 
 </details>
