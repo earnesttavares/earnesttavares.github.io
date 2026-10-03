@@ -8,7 +8,7 @@ nav_order: 3
 
 <br>
 
-<h2>🗝 Objective</h2>
+<h2>🗝 Objective 🗝</h2>
 
 
 **Cryptography is a foundational component of cybersecurity** that protects the confidentiality, integrity, and authenticity of information. It powers secure communication protocols like HTTPS, protects passwords, enables encrypted messaging, and forms the backbone of digital identity verification. This lab introduces core cryptographic concepts using OpenSSL, specifically exploring hashing, symmetric encryption, and asymmetric encryption. The objective was to demonstrate how these mechanisms validate data integrity and enforce strong access controls.  
@@ -17,7 +17,7 @@ nav_order: 3
 
 ---
 
-<h2>🗝 Lab Environment</h2>
+<h2>🗝 Lab Environment 🗝</h2>
 
 * **Operating System**: Ubuntu Linux
 
@@ -29,7 +29,7 @@ nav_order: 3
 
 ---
 
-<h2>🗝 Step-by-Step Analysis</h2>
+<h2>🗝 Step-by-Step Analysis 🗝</h2>
 
 <br>
 
@@ -309,7 +309,7 @@ RSA encryption in action!
 
 ---
 
-<h2>🗝 Key Findings & Artifacts</h2>
+<h2>🗝 Key Findings & Artifacts 🗝</h2>
 
 <br>
 
@@ -355,7 +355,7 @@ RSA encryption in action!
 
 ---
 
-<h2>🗝 Security Impact</h2>
+<h2>🗝 Security Impact 🗝</h2>
 
 Organizations rely on cryptographic controls to protect sensitive data and maintain trust in their systems. During this lab, SHA-256 hashing was used to validate data integrity by detecting file modifications. AES-256 encryption demonstrated how confidential information can be protected from unauthorized access, while RSA encryption illustrated how secure communications can occur through public and private key pairs. 
 
@@ -365,7 +365,7 @@ The concepts practiced in this exercise are foundational to technologies such as
 
 ---
 
-<h2>🗝 Skills Demonstrated</h2>
+<h2>🗝 Skills Demonstrated 🗝</h2>
 
 * Cryptography Fundamentals
 * SHA-256 Hashing
@@ -378,6 +378,6 @@ The concepts practiced in this exercise are foundational to technologies such as
 
 ---
 
-<h2>🗝 Reflection</h2>
+<h2>🗝 Reflection 🗝</h2>
 
 This lab demonstrated that effective cybersecurity extends beyond implementing technical controls and requires understanding the security principles they support. Hashing, symmetric encryption, and asymmetric encryption each serve distinct purposes, but together they help protect the confidentiality, integrity, and trustworthiness of information. Through hands-on use of OpenSSL, I developed a deeper understanding of how these cryptographic mechanisms work behind the technologies that organizations rely on daily to secure communications, validate software, and protect sensitive data. 
