@@ -4,7 +4,7 @@ parent: Labs
 nav_order: 1
 ---
 
-<h1 style="color:#33aaff;">Nmap Reconnaissance Against DVWA __📡</h1>
+<h1 style="color:#33aaff;">Nmap Reconnaissance Against DVWA _📡</h1>
 
 <br>
 
