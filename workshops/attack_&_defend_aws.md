@@ -101,6 +101,14 @@ I participated in a hands-on cloud security workshop focused on the lifecycle of
 
 ---
 
+<p align="center">
+  <img src="/workshops/images/attack_path.png" alt="Attack Path" width="80%">
+  <br>
+  <em style="color: #888888; font-size: 0.9em;">Figure 1: Attack path showing how an SSRF vulnerability can be exploited to gain access to AWS services and sensitive data.</em>
+</p> 
+
+---
+
 ## Objectives
 
 | **🔴 Attacker's Perspective** | **🔵 Defender's Perspective** | 
@@ -138,6 +146,17 @@ awsLambdaInvoke(functionName, payload)
 Using this vulnerable input field, I queried the EC2 Instance Metadata Service (IMDS) at `http://169.254.169.254/latest/meta-data/`, which returned a list of available metadata directories associated with the virtual machine. This confirmed that the application could issue requests to the EC2 Instance Metadata Service on behalf of an attacker, validating the SSRF vulnerability. Querying `http://169.254.169.254/latest/meta-data/iam/security-credentials/` exposed an IAM role attached to the EC2 instance. Because IMDSv1 was enabled, temporary IAM role credentials could be retrieved without the authentication tokens enforced by IMDSv2. I then utilized AWS CLI to authenticate the stolen credentials and successfully perform a full database dump. 
 
 <br>
+
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+  <div style="flex: 1; min-width: 280px; text-align: center;">
+    <img src="/workshops/images/web_application_code.png" alt="Reviewing Web Application Code Using Inspect Tool" style="width: 100%; border: 1px solid #444;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Unsanitized input and dead code pointing to a backend Lambda function susceptible to SSRF.</span>
+  </div>
+  <div style="flex: 1; min-width: 280px; text-align: center;">
+    <img src="/workshops/images/lamba_invocation.png" alt="Access to Sensitive Data Using Temporary Credentials" style="width: 100%; border: 1px solid #444;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Exploited an SSRF vulnerability to retrieve EC2 metadata (IMDSv1) and temporary AWS credentials. Using AWS CloudShell, the temporary credentials were leveraged to invoke a Lambda function and gain access to CloudFactory's sensitive data stored in DynamoDB.</span>
+  </div>
+</div>
 
 ---
 
