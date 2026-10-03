@@ -4,7 +4,7 @@ parent: Labs
 nav_order: 1
 ---
 
-<h1 style="color:#33aaff;">Nmap Reconnaissance Against DVWA</h1>
+<h1 style="color:#33aaff;">Nmap Reconnaissance Against DVWA 📡</h1>
 
 <br>
 
@@ -18,10 +18,13 @@ Use Nmap to discover hosts, enumerate open ports and services, and identify pote
 
 <h2>Tools & Software</h2>
 
-⚙︎ Kali Linux / Ubuntu VM Terminal <br>
-⚙︎ Nmap - Network Mapper <br>
-⚙︎ DVWA - Damn Vulnerable Web Application <br>
-⚙︎ Docker <br> 
+🌐 Kali Linux / Ubuntu VM Terminal <br>
+
+🌐 Nmap - Network Mapper <br>
+
+🌐 DVWA - Damn Vulnerable Web Application <br>
+
+🌐 Docker <br> 
 
 <br>
 
@@ -29,12 +32,17 @@ Use Nmap to discover hosts, enumerate open ports and services, and identify pote
 
 <h2>Skills Demonstrated</h2>
 
-⚙︎ Host Discovery <br>
-⚙︎ Port Scanning <br>
-⚙︎ Service Enumeration <br>
-⚙︎ TCP & SYN Scanning <br>
-⚙︎ Vulnerability Assessment <br>
-⚙︎ Analysis of Nmap Scan Results <br>
+🌐 Host Discovery <br>
+
+🌐 Port Scanning <br>
+
+🌐 Service Enumeration <br>
+
+🌐 TCP & SYN Scanning <br>
+
+🌐 Vulnerability Assessment <br>
+
+🌐 Analysis of Nmap Scan Results <br>
 
 <br>
 
@@ -46,7 +54,7 @@ The DVWA application was hosted as a Docker container within the VM environment.
 
 <br>
 
-<h3>Starting DVWA</h3>
+<h3>🔷 Starting DVWA</h3>
 
 <br>
 
@@ -56,7 +64,7 @@ docker start dvwa
 
 <br>
 
-<h3>Obtain Target IP</h3>
+<h3>🔷 Obtain Target IP</h3>
 
 Before performing a scan, the IP address of a DVWA container is needed. The following command was used to obtain the target IP: <br>
 
@@ -72,7 +80,7 @@ The terminal will display the container's IP address, `172.17.0.2`.
 
 ---
 
-<h3>Ping Sweep</h3>
+<h3>🔷 Ping Sweep</h3>
 
 A ping aka ICMP sweep was used to verify that the target was reachable. It is a network scanning technique used to determine which IP addresses are active and which ones are inactive within in a range: 
 
@@ -95,7 +103,7 @@ The scan confirmed that the DVWA host was online and responding to network probe
 
 ---
 
-<h3>SYN (Stealth) Scan</h3>
+<h3>🔷 SYN (Stealth) Scan</h3>
 
 A SYN aka stealth scan was performed to identify open ports while avoiding a full TCP connection. It is a faster and more discrete method of identifying open ports because it does not complete the full TCP three-way handshake.  
 
@@ -114,7 +122,7 @@ The scan successfully identified open ports and services. Because the target was
 
 --- 
 
-<h3>Aggressive Scan</h3>
+<h3>🔷 Aggressive Scan</h3>
 
 An aggressive scan was executed to gather detailed information about the target such as OS detection, service versioning, and script scanning. 
 
@@ -128,13 +136,19 @@ sudo nmap -A 172.17.0.2
 
 **Information Gathered from Scan:** 
 
-🔵 Open ports <br>
-🔵 Running services <br>
-🔵 Service versions <br>
-🔵 HTTP security details <br>
-🔵 MAC address information <br>
-🔵 OS detection attempts <br>
-🔵 Network distance estimation <br>
+* Open ports 
+
+* Running services
+  
+* Service versions
+
+* HTTP security details
+
+* AC address information
+
+* OS detection attempts
+
+* Network distance estimation 
 
 <br>
 
@@ -157,7 +171,7 @@ Port 80 was identified as the only accessible service, running Apache/2.4.25 on 
 
 ---
 
-<h3>Vulnerability Scan</h3>
+<h3>🔷 Vulnerability Scan</h3>
 
 <br>
 
@@ -173,7 +187,9 @@ sudo nmap --script vuln 172.17.0.2
 
 Potential security concerns identified: 
 * PHPSESSID cookie missing the httponly flag.
+  
 * Outdated Apache 2.4.25 web server.
+  
 * `robots.txt` disclosing potentially sensitive application paths.
 
 <br>
@@ -184,7 +200,7 @@ Nmap did not directly confirm vulnerabilities such as SQL injection, CSRF, or XS
 
 ---
 
-<h3>WAF Detection</h3>
+<h3>🔷 WAF Detection</h3>
 
 A scan was conducted to determine if a WAF was protecting the DVWA instance. This script works by sending intentionally malicious requests and looking for altered HTTP responses (like a 403 error or a dropped connection), which is why it flags potential IDS/IPS interference. 
 
@@ -203,7 +219,7 @@ The scan indicated the possible presence of a WAF, IDS, or IPS protecting the DV
 
 ---
 
-<h2>Key Takeaways</h2>
+<h2>💡 Key Takeaways</h2>
 
 * Successfully performed host discovery and service enumeration using Nmap.
 
