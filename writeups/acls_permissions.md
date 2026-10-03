@@ -4,9 +4,9 @@ parent: Writeups
 nav_order: 2
 ---
 
-<h1 style="color:#33aaff;">ACLs & Permissions</h1>  
+<h1 style="color:#33aaff;">📝 ACLs & Permissions</h1>  
 
-<h2>Overview</h2>
+<h2>Overview📌</h2>
 
 Linux Access Control Lists (ACLs) provide granular control over file and directory permissions beyond traditional Linux permission models. In a simulated enterprise environment, I used ACLs, groups, and directory permissions to implement least-privilege access controls while enabling secure cross-department collaboration. 
 
@@ -14,7 +14,7 @@ Linux Access Control Lists (ACLs) provide granular control over file and directo
 
 ---
 
-<h2>Technical Skills Applied</h2>
+<h2>Technical Skills Applied📌</h2>
 
 | *Security Domain* | *Commands/Concepts* | *Application* | 
 | :--- | :--- | :--- | 
@@ -29,7 +29,7 @@ Linux Access Control Lists (ACLs) provide granular control over file and directo
 
 ---
 
-<h2>Access Control Implementation</h2>
+<h2>Access Control Implementation📌</h2>
 
 The environment was designed using the principle of least privilege while allowing controlled business collaboration between departments. 
 
@@ -79,7 +79,7 @@ The environment was designed using the principle of least privilege while allowi
 
 ---
 
-<h2>Bash Automation</h2>
+<h2>Bash Automation📌</h2>
 
 To improve consistency and reduce the risk of manual configuration errors, I created a Bash script that automated:   
 
@@ -121,7 +121,7 @@ To improve consistency and reduce the risk of manual configuration errors, I cre
 
 ---
 
-<h2>Results</h2>
+<h2>Results📌</h2>
 
 * Implemented department-based access controls. <br>
 
@@ -137,6 +137,6 @@ To improve consistency and reduce the risk of manual configuration errors, I cre
 
 ---
 
-<h2>Key Takeaway</h2>
+<h2>Key Takeaway📌</h2>
 
 This project demonstrated how Linux ACLs extend traditional permission models to support real-world business requirements. Using ACLs, group management, and automation, I implemented a secure access framework that balanced least privilege with operational collaboration. 
