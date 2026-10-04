@@ -4,7 +4,7 @@ parent: Labs
 nav_order: 4
 --- 
 
-<h1 style="color:#33aaff;">Volatility 3 Memory Analysis</h1>
+<h1 style="color:#972A27;">Volatility 3 Memory Analysis</h1>
 
 <br>
 
@@ -40,19 +40,19 @@ Unlike traditional disk forensics, memory analysis provides insight into a syste
 
 <br>
 
-**Digital Forensics & Incident Response (DFIR)** <br>
+**⚡ Digital Forensics & Incident Response (DFIR):** <br>
 
 DFIR combines forensic investigation techniques and incident response processes to identify, analyze, contain, and respond to cybersecurity incidents. Memory analysis is a critical DFIR capability because it provides visibility into a system's live state and can reveal evidence that may not be present on disk. <br>
 
 <br> 
 
-**Volatility 3** <br>
+**⚡ Volatility 3:** <br>
 
 Volatility 3 is an open-source memory forensics framework used to analyze RAM captures and recover information about processes, handles, network activity, credentials, and other forensic artifacts. <br>
 
 <br>
 
-**RAM** <br>
+**⚡ RAM:** <br>
 
 Random Access Memory (RAM) is volatile storage that temporarily holds data used by running applications and operating system processes. Because RAM captures a system's live state, it often contains evidence that may not exist on disk. <br>
 
@@ -78,7 +78,7 @@ Random Access Memory (RAM) is volatile storage that temporarily holds data used 
 
 ---
 
-<h2>Scenario</h2>
+<h2>Scenario 📖</h2>
 
 A SOC team detected suspicious activity involving an employee account at a fictional organization. Evidence suggested that an attacker had gained unauthorized access and potentially moved through the environment using valid credentials. 
 
@@ -88,11 +88,11 @@ As a member of the Digital Forensics & Incident Response (DFIR) team, the task w
 
 ---
 
-<h2>Investigation Walkthrough</h2>
+<h2 style="color:#972A27;">Investigation Walkthrough</h2>
 
 <br>
 
-<h3>💾 Environment Setup</h3>
+<h3>📈 Environment Setup</h3>
 
 Downloaded the memory file and prepared the analysis environment:
 
@@ -122,9 +122,9 @@ python3 vol.py -f [ImageName] [InsertPlugin]
 
 ---
 
-<h2>Investigation Process</h2>
+<h2 style="color:#972A27;">Investigation Process</h2>
 
-<h3>💾 Determining Memory Capture Time</h3>
+<h3>📈 Determining Memory Capture Time</h3>
 
 To identify when the memory image was captured, I enumerated running processes using the `pslist` plugin: 
 
@@ -142,7 +142,7 @@ This timestamp established the point-in-time context for the investigation.
 
 <br>
 
-<h3>💾 Investigating Suspicious Processes</h3>
+<h3>📈 Investigating Suspicious Processes</h3>
 
 The lab directed attention toward PID 1600 as part of the investigation workflow. To gather additional information, I inspected the process handles associated with the process:   
 
@@ -160,7 +160,7 @@ VBoxTray.exe is a legitimate VirtualBox Guest Additions process. This step demon
 
 <br>
 
-<h3>💾 Identifying Exploitation Evidence</h3>
+<h3>📈 Identifying Exploitation Evidence</h3>
 
 The attack scenario referenced exploitation activity associated with: 
 
@@ -172,7 +172,7 @@ Researching vulnerabilities during a forensic investigation helps analysts under
 
 <br>
 
-<h3>💾 Credential Artifact Analysis</h3>
+<h3>📈 Credential Artifact Analysis</h3>
 
 Recovered credential-related artifacts from memory using Volatility's `Hashdump` plugin to demonstrate how password hashes and privileged account data can remain accessible in RAM.   
 
@@ -184,7 +184,7 @@ The hash dump plugin demonstrated how password hash information can be recovered
 
 <br>
 
-<h3>💾 Command History Review</h3>
+<h3>📈 Command History Review</h3>
 
 Examined command-line activity to better understand actions performed on the system. 
 
@@ -198,7 +198,7 @@ This plugin can help uncover attacker actions by revealing executed programs, sc
 
 ---
 
-<h2>Key Investigative Findings</h2>
+<h2>Key Investigative Findings 📉</h2>
 
  * Determined the memory image timestamp was 2019-05-02 18:11:45.
  
@@ -214,7 +214,7 @@ This plugin can help uncover attacker actions by revealing executed programs, sc
 
 ---
 
-<h2>Skills Demonstrated</h2>
+<h2>💡 Skills Demonstrated</h2>
 
 * Memory Forensics
 
@@ -238,6 +238,6 @@ This plugin can help uncover attacker actions by revealing executed programs, sc
 
 ---
 
-<h2>Takeaways</h2>
+<h2>Key Takeaways</h2>
 
 This investigation demonstrated how memory forensics supports incident response by providing visibility into a system's live state. Using Volatility 3, I analyzed running processes, examined process handles, reviewed command-line activity, and explored credential-related artifacts contained within RAM. The exercise reinforced the importance of memory analysis as a DFIR technique, particularly when critical evidence may not be present on disk. 
