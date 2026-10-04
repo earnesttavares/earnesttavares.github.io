@@ -198,6 +198,8 @@ Compromised credential categories included:
 
 The malware collected and transmitted stored login information from the compromised workstation. 
 
+<br>
+
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
   
 <div style="width: 45%; text-align: center;">
