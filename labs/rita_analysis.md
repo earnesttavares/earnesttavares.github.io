@@ -4,11 +4,11 @@ parent: Labs
 nav_order: 3
 ---
 
-<h1 style="color:#33aaff;">RITA Analysis</h1>  
+<h1 style="color:#ea803d;">RITA Analysis</h1>  
 
 <br>
 
-<h2>Objective</h2>
+<h2 style="color:#ea803d;">Objectives</h2>
 
 Use RITA (Real Intelligence Threat Analytics) to analyze Zeek network logs and identify indicators of malicious activity, including C2 (command and control) beaconing and DNS tunneling. The goal was to investigate suspicious network communications, identify potential indicators of compromise, and understand how threat actors can leverage legitimate services for covert communications. RITA is specifically designed to detect behaviors including beaconing, long-lived connections, blacklisted domains, and DNS tunneling. 
 
@@ -16,7 +16,7 @@ Use RITA (Real Intelligence Threat Analytics) to analyze Zeek network logs and i
 
 ---
 
-<h2>Tools & Software</h2>
+<h2 style="color:#ea803d;">Tools & Software</h2>
 
 * RITA
 
@@ -32,37 +32,37 @@ Use RITA (Real Intelligence Threat Analytics) to analyze Zeek network logs and i
 
 ---
 
-<h2>Key Concepts</h2>
+<h2 style="color:#ea803d;">Key Concepts</h2>
 
 <details markdown="block"><summary>Click to Expand</summary>
 
 <br>
 
-**Beacon Detection** <br>
+**⊹ Beacon Detection:** <br>
 
 Beaconing occurs when an infected host communicates with a C2 server at regular intervals. This recurring communication pattern is commonly used by malware operators to maintain persistence and receive instructions from remote infrastructure. RITA analyzes traffic metadata to identify these patterns. <br>
 
 <br>
 
-**DNS Tunneling** <br>
+**⊹ DNS Tunneling:** <br>
 
 DNS tunneling is a technique that allows attackers to transmit data through DNS requests and responses. Because DNS traffic is often trusted and allowed through perimeter defenses, attackers can abuse it to create covert communication channels for C2 or data exfiltration. 
 
 <br>
 
-**Real Intelligence Threat Analysis** <br>
+**⊹ Real Intelligence Threat Analysis:** <br>
 
 RITA (named after Rita Strand) is an open-source network traffic analysis framework developed by Active Countermeasures. It identifies suspicious communication patterns such as beaconing, long-duration connections, and DNS tunneling activity. 
 
 <br>
 
-**MongoDB** <br>
+**⊹ MongoDB:** <br>
 
 MongoDB stores the imported Zeek log data that RITA analyzes during threat hunting investigations. 
 
 <br>
 
-**zgrep** <br>
+**⊹ zgrep:** <br>
 
 zgrep enables searching within compressed log files, allowing investigators to review large datasets without extracting them first. 
 
@@ -72,15 +72,15 @@ zgrep enables searching within compressed log files, allowing investigators to r
 
 ---
 
-<h2>Analysis & Investigation</h2>
+<h2 style="color:#ea803d;">Analysis & Investigation</h2>
 
-<h3>🔶Imported & Analyzed Network Traffic</h3>
+<h3 style="color:#B4BEFE;">💻 Imported & Analyzed Network Traffic</h3>
 
 I imported the provided Zeek logs into RITA and generated reports to identify abnormal communication patterns across the network. I reviewed the Beaconing, User Agent, and DNS analysis reports to locate activity that deviated from normal traffic behavior. 
 
 <br>
 
-<h3>🔶Investigated Beaconing Activity</h3>
+<h3 style="color:#B4BEFE;">💻 Investigated Beaconing Activity</h3>
 
 The Beaconing report identified a suspicious external IP address: 
 
@@ -94,7 +94,7 @@ Further investigation revealed the IP address was hosted by **DigitalOcean**, a 
 
 <br>
 
-<h3>🔶Correlated User-Agent Activity</h3>
+<h3 style="color:#B4BEFE;">💻 Correlated User-Agent Activity</h3>
 
 I reviewed the User Agent report and identified a large volume of traffic associated with the following User-Agent string: 
 
@@ -106,7 +106,7 @@ The connection count closely aligned with the beaconing activity, providing addi
 
 <br>
 
-<h3>🔶Investigated DNS Traffic</h3>
+<h3 style="color:#B4BEFE;">💻 Investigated DNS Traffic</h3>
 
 Using a second dataset, I reviewed RITA's DNS report and identified excessive requests to: 
 
@@ -118,7 +118,7 @@ The domain generated approximately 82,920 DNS requests, making it a strong candi
 
 <br>
 
-<h3>🔶Examined DNS Logs with zgrep</h3>
+<h3 style="color:#B4BEFE;">💻 Examined DNS Logs with zgrep</h3>
 
 To validate the findings, I used zgrep to search the compressed DNS logs for activity related to the suspicious domain: 
 
@@ -136,7 +136,7 @@ The frequency and structure of these requests suggested an attempt to transport 
 
 <br>
 
-<h3>🔶Identified DNS Tunneling Techniques</h3>
+<h3 style="color:#B4BEFE;">💻 Identified DNS Tunneling Techniques</h3>
 
 Reviewing the DNS requests showed that each query contained unique, random-looking hexadecimal strings prepended to the domain name: 
 
@@ -149,7 +149,9 @@ These hexadecimal values served as encoded payload fragments. By continuously ch
 
 Based on the observed behavior, the traffic was consistent with **DNSCat2**, a tool that uses DNS queries as a covert communication channel between an infected host and an attacker-controlled server. 
 
-Evidence supporting this conclusion included: 
+<br>
+
+📋 Evidence supporting this conclusion included: 
 
 * Large volumes of DNS TXT record requests.
 
@@ -167,9 +169,9 @@ These characteristics closely align with known **DNSCat2** traffic patterns.
 
 ---
 
-<h2>Evidence/Results</h2>
+<h2 style="color:#ea803d;">Evidence/Results</h2>
 
-<h3>Beaconing Detection</h3>
+<h3 style="color:#B4BEFE;">Beaconing Detection</h3>
 
 | **Findings** | **Value** | 
 | :--- | :--- | 
@@ -180,7 +182,7 @@ These characteristics closely align with known **DNSCat2** traffic patterns.
 
 <br>
 
-<h3>DNS Tunneling Investigation</h3>
+<h3 style="color:#B4BEFE;">DNS Tunneling Investigation</h3>
 
 | **Findings** | **Value** | 
 | :--- | :--- | 
@@ -194,7 +196,7 @@ These characteristics closely align with known **DNSCat2** traffic patterns.
 
 ---
 
-<h2>Key Findings</h2>
+<h2 style="color:#ea803d;">Key Findings</h2>
 
 * Identified probable C2 beaconing activity.
 
@@ -222,7 +224,7 @@ RITA successfully highlighted these anomalous communication patterns, while supp
 
 ---
 
-<h2>Skills Demonstrated</h2>
+<h2 style="color:#ea803d;">💡 Skills Demonstrated</h2>
 
 * Threat Hunting
 
@@ -250,6 +252,6 @@ RITA successfully highlighted these anomalous communication patterns, while supp
 
 ---
 
-<h2>Takeaway</h2>
+<h2 style="color:#ea803d;">Key Takeaway</h2>
 
 This lab demonstrated how behavioral network analysis can reveal attacker communications that may evade traditional signature-based detection methods. Using RITA and Zeek data, I identified indicators of C2 beaconing, investigated suspicious DNS activity, and validated evidence of DNS tunneling through log analysis. The investigation reinforced the importance of combining automated analytics with manual review when conducting threat hunting operations. 
