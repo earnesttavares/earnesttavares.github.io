@@ -4,7 +4,10 @@ parent: Labs
 nav_order: 2
 ---
 
-<h1 style="color:#33aaff;">Wireshark Traffic Analysis & Incident Investigation Lab Report °‧ 𓆝 𓆟 𓆞</h1> 
+<h1>
+  <span style="color: #D3D7CF;">Wireshark Traffic Analysis</span>  
+  <span style="color: #3465A4;">& Incident Investigation Lab Report °‧ 𓆝 𓆟 𓆞</span> 
+</h1>
 
 <br>
 
@@ -22,9 +25,9 @@ The purpose of this lab was to develop hands-on experience using Wireshark to ca
 
 * PCAP files provided in the lab exercises
 
-* Wireshark Display Filters (e.g., `ip addr`, `http`, `smtp`) & TCP Stream Reassembly 
+* Wireshark Display Filters (e.g., ip addr, http, smtp) & TCP Stream Reassembly 
 
-* Wireshark Protocol Hierarchy Statistics & Conversations Menu 
+* Wireshark Statistics Menu for protocol breakdowns and endpoint traffic
 
 <br>
 
@@ -40,11 +43,11 @@ The lab emphasized understanding packet structure, TCP communications, filtering
 
 ---
 
-<h2>Part 1: Protocol & Network Traffic Analysis</h2>
+<h2>🪸 Part 1: Protocol & Network Traffic Analysis</h2>
 
 <br>
 
-<h3>🦈 Packet & Protocol Examination</h3>
+<h3 style="color:#FF4040;">Packet & Protocol Examination 🦈</h3>
 
 During the first phase of the lab, packet captures were analyzed to understand how network traffic flows between endpoints. Wireshark's three primary interface panes were examined: 
 
@@ -58,7 +61,7 @@ These components allowed detailed inspection of packet metadata, protocol inform
 
 ---
 
-<h3>🦈 Traffic Statistics</h3>
+<h3 style="color:#FF4040;">Traffic Statistics 🦈</h3>
 
 Analysis of the provided capture revealed: 
 
@@ -71,22 +74,20 @@ Analysis of the provided capture revealed:
 | TCP Port 80 Packets | 897 | 
 | TCP Communication Issues | 1,089 | 
 
-<br>
-
 These statistics were obtained using protocol filters, packet counting, and protocol hierarchy analysis. 
 
 <br>
 
 ---
 
-<h3>🦈 HTTP User-Agent Analysis</h3>
+<h3 style="color:#FF4040;">HTTP User-Agent Analysis 🦈</h3>
 
 Inspection of HTTP request traffic revealed details regarding the compromised workstation's operating environment. 
 
 <br>
 
-<u>**Operating System:**</u> Microsoft Windows <br>
-<u>**Browser Version:**</u> Google Chrome 80 <br>
+<u>Operating System:</u> Microsoft Windows <br>
+<u>Browser Version:</u> Google Chrome 80 <br>
 
 <br>
 
@@ -96,7 +97,7 @@ The User-Agent string provided evidence about the source operating system and we
 
 ---
 
-<h3>🦈 TCP Stream Analysis</h3>
+<h3 style="color:#FF4040;">TCP Stream Analysis 🦈</h3>
 
 TCP stream analysis was performed using the "Follow TCP Stream" feature. This allowed reconstruction of complete conversations between network endpoints, providing visibility into application-layer communications and session contents. 
 
@@ -106,11 +107,11 @@ Frame analysis revealed a frame length of 66 bytes within the selected TCP strea
 
 ---
 
-<h2>Part 2: Incident Response Investigation</h2>
+<h2>🪸 Part 2: Incident Response Investigation</h2>
 
 <br>
 
-<h3>🦈 Scenario Overview</h3>
+<h3 style="color:#FF4040;">Scenario Overview 🦈</h3>
 
 The lab simulated a cybersecurity incident involving an employee who clicked a malicious link. This action resulted in the installation of spyware on her workstation. The malware established unauthorized access and enabled attackers to: 
 
@@ -128,9 +129,9 @@ The objective was to investigate network traffic and identify IoCs associated wi
 
 ---
 
-<h3>🦈 IoCs Identified</h3>
+<h3 style="color:#FF4040;">IoCs Identified 🦈</h3>
 
-<h4>Incident Start Time</h4>
+<u>INCIDENT START TIME</u>
 
 The earliest suspicious activity observed in the packet capture occurred at: 
 
@@ -144,7 +145,7 @@ This timestamp was identified by examining the arrival time of the first suspici
 
 ---
 
-<h3>🦈 Victim System Information</h3>
+<h3 style="color:#FF4040;">Victim System Information 🦈</h3>
 
 | **IOC** | **Value** | 
 | :--- | :--- | 
@@ -157,7 +158,7 @@ This timestamp was identified by examining the arrival time of the first suspici
 
 ---
 
-<h3>🦈 Suspicious Email Activity</h3>
+<h3 style="color:#FF4040;">Suspicious Email Activity 🦈</h3>
 
 Analysis of SMTP traffic revealed suspicious communications. 
 
@@ -172,7 +173,7 @@ The destination address appeared anomalous compared to expected organizational c
 
 ---
 
-<h3>🦈 Hardware Information Exfiltrated</h3>
+<h3 style="color:#FF4040;">Hardware Information Exfiltrated 🦈</h3>
 
 The spyware transmitted details about the victim's workstation including: 
 
@@ -185,7 +186,7 @@ The spyware transmitted details about the victim's workstation including:
 
 ---
 
-<h3>🦈 Credential Theft</h3>
+<h3 style="color:#FF4040;">Credential Theft 🦈</h3>
 
 Investigation of SMTP traffic revealed stolen account information. 
 
@@ -201,15 +202,15 @@ The malware collected and transmitted stored login information from the compromi
 
 ---
 
-<h3>🦈 Encoded Authentication Data</h3>
+<h3 style="color:#FF4040;">Encoded Authentication Data 🦈</h3>
 
 Further inspection uncovered Base64-encoded authentication credentials associated with webhostbox.net. 
 
-Decoded username: 
+<u>Decoded username:</u> 
 
 * marketing@transgear.in
 
-Decoded password: 
+<u>Decoded password:</u> 
 
 * M@ssw0rd#621
 
@@ -269,7 +270,7 @@ Key findings included:
 
 ---
 
-<h2>Takeaways</h2>
+<h2>💡 Key Takeaways</h2>
 
 This lab provided practical experience using Wireshark for both network troubleshooting and cybersecurity incident response. The first portion strengthened understanding of packet analysis, protocol filtering, TCP communications, and network behavior. The second portion simulated a real-world security incident where packet analysis enabled the identification of malicious activity, compromised credentials, and multiple IoCs. 
 
