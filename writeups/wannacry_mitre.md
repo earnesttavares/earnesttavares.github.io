@@ -4,7 +4,7 @@ parent: Writeups
 nav_order: 1
 ---
 
-<h1 style="color:#7A0200;">Threat Intelligence Report: WannaCry Ransomware</h1> 
+<h1 style="color:#7A0200; background-color: black; padding: 10px;">Threat Intelligence Report: WannaCry Ransomware</h1> 
 
 <br>
 
@@ -25,7 +25,7 @@ nav_order: 1
 
 ---
 
-<h2>Executive Summary 👾</h2>
+<h2>Executive Summary 💻💀</h2>
 
 
 This assessment analyzes the WannaCry ransomware attack through the lens of threat intelligence and the MITRE ATT&CK framework to identify adversary behaviors, IoCs, and defensive measures. 
