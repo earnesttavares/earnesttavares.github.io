@@ -151,7 +151,7 @@ Based on the observed behavior, the traffic was consistent with **DNSCat2**, a t
 
 <br>
 
-📋 Evidence supporting this conclusion included: 
+📋 <u>Evidence supporting this conclusion included:</u> 
 
 * Large volumes of DNS TXT record requests.
 
