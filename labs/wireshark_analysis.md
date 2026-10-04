@@ -198,6 +198,24 @@ Compromised credential categories included:
 
 The malware collected and transmitted stored login information from the compromised workstation. 
 
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+  
+<div style="width: 45%; text-align: center;">
+    <img src="/labs/images/wireshark_example_1.png" alt="Wireshark Example 1" style="width: 100%; height: auto; border: 1px solid #444; border-radius: 4px;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 8px; text-align: left; line-height: 1.4;">
+      Figure 1: Analysis of the SMTP TCP stream revealed that the malware collected and transmitted system information and user credentials to an external email account. The transmitted data included host details, browser-stored credentials, and application account information.   
+    </span>
+  </div> 
+  
+  <br>
+  <br>
+  
+  <div style="flex: 1; min-width: 280px; text-align: center;">
+    <img src="/labs/images/wireshark_example_2.png" alt="Wireshark Example 2" style="width: 100%; border: 1px solid #444;">
+    <span style="display: block; color: #888; font-size: 0.85em; margin-top: 5px;">Figure 2: Sensitive usernames and passwords have been redacted. Multiple online services appeared within the data, indicating that credentials stored in browsers and email clients were harvested before transmission. </span>
+  </div>
+</div>
+
 <br>
 
 ---
@@ -206,11 +224,11 @@ The malware collected and transmitted stored login information from the compromi
 
 Further inspection uncovered Base64-encoded authentication credentials associated with webhostbox.net. 
 
-<u>Decoded username:</u> 
+❖ **Decoded username:** 
 
 * marketing@transgear.in
 
-<u>Decoded password:</u> 
+❖ **Decoded password:** 
 
 * M@ssw0rd#621
 
