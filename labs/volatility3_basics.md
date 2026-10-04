@@ -16,7 +16,7 @@ Unlike traditional disk forensics, memory analysis provides insight into a syste
 
 <br>
 
-<h2>Objectives</h2>
+<h2>Objectives 🎯</h2>
 
 * Understand the role of memory forensics in incident response.
 
