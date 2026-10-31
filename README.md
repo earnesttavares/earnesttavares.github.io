@@ -1,12 +1,8 @@
-<h2>Live Site:</h2> 
+## Live Site:
 
 https://earnesttavares.github.io/ 
 
-█▓▒░ thanks for visiting ░▒▓█  
-
 --- 
-
-<p align="center">
 
 ### LICENSE
 
@@ -17,4 +13,7 @@ UNLESS OTHERWISE NOTED, ALL WRITTEN CONTENT, PROJECT DESCRIPTION, GRAPHICS, SCRE
 
 ALL RIGHTS RESERVED.
 
-</p>
+---
+
+█▓▒░ thanks for visiting ░▒▓█  
+
